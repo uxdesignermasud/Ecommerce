@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-com — Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ══ Top utility bar ══ -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__social">
+        <span>Follow Us:</span>
+        <a href="#" aria-label="Facebook" class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7h2.5z"/></svg></a>
+        <a href="#" aria-label="X" class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M17.5 4h2.9l-6.4 7.3L21.5 20h-5.9l-4.6-6-5.3 6H2.8l6.9-7.8L2.5 4h6l4.2 5.5L17.5 4zm-1 14.3h1.6L7.7 5.5H6L16.5 18.3z"/></svg></a>
+        <a href="#" aria-label="Instagram" class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M12 8.8A3.2 3.2 0 1 0 12 15.2 3.2 3.2 0 0 0 12 8.8zm0-2.1a5.3 5.3 0 1 1 0 10.6 5.3 5.3 0 0 1 0-10.6zm6.8-.3a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0zM12 4.2c-2.5 0-2.8 0-3.8.1-1 .1-1.6.2-2.1.4-.6.2-1 .5-1.4.9-.4.4-.7.8-.9 1.4-.2.5-.3 1.1-.4 2.1-.1 1-.1 1.3-.1 3.8s0 2.8.1 3.8c.1 1 .2 1.6.4 2.1.2.6.5 1 .9 1.4.4.4.8.7 1.4.9.5.2 1.1.3 2.1.4 1 .1 1.3.1 3.8.1s2.8 0 3.8-.1c1-.1 1.6-.2 2.1-.4.6-.2 1-.5 1.4-.9.4-.4.7-.8.9-1.4.2-.5.3-1.1.4-2.1.1-1 .1-1.3.1-3.8s0-2.8-.1-3.8c-.1-1-.2-1.6-.4-2.1-.2-.6-.5-1-.9-1.4-.4-.4-.8-.7-1.4-.9-.5-.2-1.1-.3-2.1-.4-1-.1-1.3-.1-3.8-.1z"/></svg></a>
+        <a href="#" aria-label="YouTube" class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8c1.6.4 7.8.4 7.8.4s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3L10 15z"/></svg></a>
+      </div>
+      <p class="topbar__promo">Extra 10% off on $1000 <a href="#">Shop Now</a></p>
+      <div class="topbar__links">
+        <a href="#">Track your order</a>
+        <span class="divider">|</span>
+        <button class="lang">English <span class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ Main header ══ -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="index.html">
+        <img src="Assets/Icon/E com Logo.svg" alt="E-com logo" width="163" height="50" />
+      </a>
+      <div class="header__actions">
+        <div class="searchwrap">
+          <form class="search" role="search" id="searchForm">
+            <div class="search__cat">
+              <button type="button" id="searchCatBtn" aria-expanded="false" aria-haspopup="listbox">
+                <span id="searchCatLabel">All</span>
+                <span class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </button>
+              <ul class="search__menu" id="searchCatMenu" role="listbox" hidden>
+                <li><button type="button" class="active" data-value="all" role="option">All</button></li>
+                <li><button type="button" data-value="mobiles" role="option">Mobiles &amp; Tab</button></li>
+                <li><button type="button" data-value="electronics" role="option">Electronics</button></li>
+                <li><button type="button" data-value="womens" role="option">Women's Fashion</button></li>
+                <li><button type="button" data-value="mens" role="option">Men's Fashion</button></li>
+                <li><button type="button" data-value="beauty" role="option">Beauty</button></li>
+                <li><button type="button" data-value="home" role="option">Home &amp; Living</button></li>
+                <li><button type="button" data-value="appliances" role="option">Appliances</button></li>
+                <li><button type="button" data-value="baby" role="option">Baby &amp; Kids</button></li>
+                <li><button type="button" data-value="sports" role="option">Sports</button></li>
+              </ul>
+            </div>
+            <input type="search" id="searchInput" placeholder="Search phones, beauty, home & more…" aria-label="Search products" autocomplete="off" />
+            <button type="button" class="search__tool" id="imgSearchBtn" aria-label="Search by image" title="Search by image">
+              <svg viewBox="0 0 24 24"><path d="M4 8h3l2-2.5h6L17 8h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1zm8 9a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0-2a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg>
+            </button>
+            <button type="button" class="search__tool search__ai" id="aiSearchBtn" aria-label="Ask AI" title="Ask AI">
+              <svg viewBox="0 0 24 24"><path d="M12 2l1.9 5.7L19.5 9l-5.6 1.9L12 16.5l-1.9-5.6L4.5 9l5.6-1.3L12 2zm7 11l.9 2.6 2.6.9-2.6.9-.9 2.6-.9-2.6-2.6-.9 2.6-.9.9-2.6zM5 15l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7.7-2z"/></svg>
+            </button>
+            <button type="submit" class="search__go" aria-label="Search" title="Search">
+              <svg viewBox="0 0 24 24"><path d="M10 2a8 8 0 1 0 4.9 14.3l4 4 1.4-1.4-4-4A8 8 0 0 0 10 2zm0 2a6 6 0 1 1 0 12 6 6 0 0 1 0-12z"/></svg>
+              <span>Search</span>
+            </button>
+          </form>
+          <input type="file" id="imgSearchInput" accept="image/*" hidden />
+          <div class="ai-panel" id="aiPanel" hidden>
+            <p class="ai-panel__title"><span class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M12 2l1.9 5.7L19.5 9l-5.6 1.9L12 16.5l-1.9-5.6L4.5 9l5.6-1.3L12 2zm7 11l.9 2.6 2.6.9-2.6.9-.9 2.6-.9-2.6-2.6-.9 2.6-.9.9-2.6zM5 15l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7.7-2z"/></svg></span> Ask AI — describe what you want</p>
+            <div class="ai-panel__row">
+              <input type="text" id="aiInput" placeholder="e.g. red running shoes under $150" aria-label="Ask AI" />
+              <button id="aiGo">Ask</button>
+            </div>
+            <div class="ai-panel__chips" id="aiChips"></div>
+          </div>
+          <div class="img-panel" id="imgPanel" hidden>
+            <img id="imgPreview" alt="Uploaded search image" />
+            <p>Image added — showing visually similar picks below.</p>
+          </div>
+        </div>
+        <a href="#" class="h-icon" aria-label="Sign in"><img src="Assets/Icon/User Profile.svg" alt="" width="24" height="24" /><span>Sign in</span></a>
+        <a href="#" class="h-icon" aria-label="Wishlist"><img src="Assets/Icon/Fav.svg" alt="" width="24" height="24" /><span>Wishlist</span></a>
+        <a href="#" class="h-icon" aria-label="Cart"><img src="Assets/Icon/Cart.svg" alt="" width="24" height="24" /><span>Cart</span></a>
+      </div>
+    </div>
+    <!-- ══ Category strip below header ══ -->
+    <div class="catstrip">
+      <div class="container catstrip__inner">
+        <button class="catstrip__all" id="allCatsBtn" aria-expanded="false"><span class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg></span> All Categories <span class="icon icon-16 catstrip__chev"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+        <nav class="catstrip__nav" aria-label="Categories">
+          <a href="#">Fashion</a>
+          <a href="#">Electronics &amp; Gadget</a>
+          <a href="#">Appliances</a>
+          <a href="#">Mobiles &amp; Tablets</a>
+          <a href="#">Kitchen &amp; Dining</a>
+          <a href="#">Travel Accessories</a>
+          <a href="#">Bags &amp; Luggage</a>
+          <a href="#">Personal Care</a>
+          <a href="#">Food &amp; Grocery</a>
+        </nav>
+      </div>
+      <!-- ══ Mega menu (opens on All Categories click) ══ -->
+      <div class="megamenu" id="megaMenu" hidden>
+        <div class="container megamenu__inner">
+          <ul class="megamenu__side" id="megaSide"></ul>
+          <div class="megamenu__main">
+            <div class="megamenu__head">
+              <h3 id="megaTitle">Fashion</h3>
+              <a href="#">View all <span class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+            </div>
+            <div class="megamenu__subs" id="megaSubs"></div>
+          </div>
+          <aside class="megamenu__explore">
+            <p class="explore__kicker">Explore</p>
+            <h4 id="exploreTitle">Fashion</h4>
+            <p id="exploreText">Browse the top picks in fashion from verified sellers.</p>
+            <a class="btn btn--primary btn--sm" href="#">Shop now <span class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+            <p class="explore__note"><span class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M3 7h11v8H3zM14 10h4l3 3v2h-7zM6 19a1.8 1.8 0 1 0 0-3.6A1.8 1.8 0 0 0 6 19zm11 0a1.8 1.8 0 1 0 0-3.6 1.8 1.8 0 0 0 0 3.6z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span> 100% Cash on Delivery</p>
+            <p class="explore__note"><span class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M3 7h11v8H3zM14 10h4l3 3v2h-7zM6 19a1.8 1.8 0 1 0 0-3.6A1.8 1.8 0 0 0 6 19zm11 0a1.8 1.8 0 1 0 0-3.6 1.8 1.8 0 0 0 0 3.6z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span> Fast home delivery</p>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ══ Hero ══ -->
+    <section class="container hero">
+      <article class="hero__main">
+        <img src="Assets/Banner/Main Hero Banner.png" alt="Galaxy S25 Series pre-order" />
+      </article>
+      <div class="hero__side">
+        <article class="hero__card"><img src="Assets/Banner/Sub Banner 1.png" alt="Advanced AI phones" /></article>
+        <article class="hero__card"><img src="Assets/Banner/Sub Banner 2.png" alt="Premium watches" /></article>
+      </div>
+    </section>
+
+    <!-- ══ Service strip ══ -->
+    <section class="container">
+      <div class="trust">
+        <div class="trust__item">
+          <img src="Assets/Icon/Free delivery.svg" alt="Free delivery" width="32" height="32" />
+          <div><strong>Free Delivery</strong><small>Orders Over $499</small></div>
+        </div>
+        <div class="trust__item">
+          <img src="Assets/Icon/Best Warranty Policy.svg" alt="Best warranty policy" width="32" height="32" />
+          <div><strong>Best Warranty Policy</strong><small>With a 30 Day</small></div>
+        </div>
+        <div class="trust__item">
+          <img src="Assets/Icon/Best Online Support.svg" alt="Best online support" width="32" height="32" />
+          <div><strong>Best Online Support</strong><small>Hours: 8AM–9PM</small></div>
+        </div>
+        <div class="trust__item">
+          <img src="Assets/Icon/Get Best Offers.svg" alt="Get best offers" width="32" height="32" />
+          <div><strong>Get Best Offers</strong><small>Enter Now</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ Top categories ══ -->
+    <section class="container section">
+      <h2 class="section__title">Top Categories</h2>
+      <div class="cats">
+        <a class="cat" href="#"><img src="Assets/Category Banner Image/image.png" alt="Fashion" /><span>Fashion</span></a>
+        <a class="cat" href="#"><img src="Assets/Category Banner Image/image-1.png" alt="Smart Watch" /><span>Smart Watch</span></a>
+        <a class="cat" href="#"><img src="Assets/Category Banner Image/image 104.png" alt="Home Decor" /><span>Home Decor</span></a>
+        <a class="cat" href="#"><img src="Assets/Category Banner Image/image 106.png" alt="Electronics and Gadget" /><span>Electronics &amp; Gadget</span></a>
+        <a class="cat" href="#"><img src="Assets/Category Banner Image/image 114.png" alt="Mobiles and Tablets" /><span>Mobiles &amp; Tablets</span></a>
+      </div>
+    </section>
+
+    <!-- ══ Deals of the day ══ -->
+    <section class="container section">
+      <div class="deals-bar">
+        <div class="deals-bar__left">
+          <h2 class="section__title section__title--inline">Deals Of The Day</h2>
+          <div class="countdown" id="countdown" aria-label="Deal countdown">
+            <div class="cd-box"><span id="cd-d">08</span><small>Days</small></div><i>:</i>
+            <div class="cd-box"><span id="cd-h">05</span><small>Hours</small></div><i>:</i>
+            <div class="cd-box"><span id="cd-m">10</span><small>Mins</small></div><i>:</i>
+            <div class="cd-box cd-box--sec"><span id="cd-s">30</span><small>Secs</small></div>
+          </div>
+        </div>
+        <a class="btn btn--primary btn--sm" href="#">View All <span class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      </div>
+      <div class="deals">
+        <article class="deal">
+          <div class="deal__img"><img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=800&q=80" alt="Smartphone deal" /></div>
+          <div class="deal__body">
+            <h3>Luxury Makeup Organizer vanity Box Cosmetic Case Combo</h3>
+            <div class="tags"><span>Red</span><span>Blue</span><span>Green</span></div>
+            <p class="off">20% Off</p>
+            <a class="btn btn--ghost btn--sm" href="#">Shop Now</a>
+          </div>
+        </article>
+        <article class="deal">
+          <div class="deal__img"><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80" alt="Headphones deal" /></div>
+          <div class="deal__body">
+            <h3>Luxury Makeup Organizer vanity Box Cosmetic Case Combo</h3>
+            <div class="tags"><span>Red</span><span>Blue</span><span>Green</span></div>
+            <p class="off">20% Off</p>
+            <a class="btn btn--ghost btn--sm" href="#">Shop Now</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ══ Promo banner ══ -->
+    <section class="container section">
+      <article class="promo promo--img">
+        <img src="Assets/Banner/2nd Section Main Banner.png" alt="Upgrade your viewing experience — up to 44% off TVs" />
+      </article>
+    </section>
+
+    <!-- ══ New arrival (4 per row x 2 rows = 8) ══ -->
+    <section class="container section" id="new-arrival">
+      <div class="deals-bar">
+        <h2 class="section__title section__title--inline">New Arrival</h2>
+        <a class="btn btn--primary btn--sm" href="#">View All <span class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      </div>
+      <div class="rail rail--4">
+        <article class="mini" data-name="wireless headphones">
+          <div class="mini__img">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=500&q=80" alt="Wireless headphones" />
+            <div class="mini__stepper"><div class="qty"><button aria-label="Decrease quantity">−</button><span>1</span><button aria-label="Increase quantity">+</button></div></div>
+          </div>
+          <h3>Realfill ambru brusto</h3>
+          <p class="stars" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg></p>
+          <p class="mini__price" data-unit="199">$199.00</p>
+          <div class="mini__actions">
+            <button class="mini__cart"><img src="Assets/Icon/Add to Card Icon.svg" alt="" width="20" height="20" /> Add to Cart</button>
+            <button class="mini__view" aria-label="View product details"><img src="Assets/Icon/Show Product Details Icon.svg" alt="" width="20" height="20" /></button>
+          </div>
+        </article>
+        <article class="mini" data-name="leather handbag">
+          <div class="mini__img">
+            <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=500&q=80" alt="Blue leather handbag" />
+            <div class="mini__stepper"><div class="qty"><button aria-label="Decrease quantity">−</button><span>1</span><button aria-label="Increase quantity">+</button></div></div>
+          </div>
+          <h3>Realfill ambru brusto</h3>
+          <p class="stars" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg></p>
+          <p class="mini__price" data-unit="199">$199.00</p>
+          <div class="mini__actions">
+            <button class="mini__cart"><img src="Assets/Icon/Add to Card Icon.svg" alt="" width="20" height="20" /> Add to Cart</button>
+            <button class="mini__view" aria-label="View product details"><img src="Assets/Icon/Show Product Details Icon.svg" alt="" width="20" height="20" /></button>
+          </div>
+        </article>
+        <article class="mini" data-name="smartphone">
+          <div class="mini__img">
+            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=500&q=80" alt="Smartphone" />
+            <div class="mini__stepper"><div class="qty"><button aria-label="Decrease quantity">−</button><span>1</span><button aria-label="Increase quantity">+</button></div></div>
+          </div>
+          <h3>Realfill ambru brusto</h3>
+          <p class="stars" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg></p>
+          <p class="mini__price" data-unit="199">$199.00</p>
+          <div class="mini__actions">
+            <button class="mini__cart"><img src="Assets/Icon/Add to Card Icon.svg" alt="" width="20" height="20" /> Add to Cart</button>
+            <button class="mini__view" aria-label="View product details"><img src="Assets/Icon/Show Product Details Icon.svg" alt="" width="20" height="20" /></button>
+          </div>
+        </article>
+        <article class="mini" data-name="perfume">
+          <div class="mini__img">
+            <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=500&q=80" alt="Perfume bottle" />
+            <div class="mini__stepper"><div class="qty"><button aria-label="Decrease quantity">−</button><span>1</span><button aria-label="Increase quantity">+</button></div></div>
+          </div>
+          <h3>Realfill ambru brusto</h3>
+          <p class="stars" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg></p>
+          <p class="mini__price" data-unit="199">$199.00</p>
+          <div class="mini__actions">
+            <button class="mini__cart"><img src="Assets/Icon/Add to Card Icon.svg" alt="" width="20" height="20" /> Add to Cart</button>
+            <button class="mini__view" aria-label="View product details"><img src="Assets/Icon/Show Product Details Icon.svg" alt="" width="20" height="20" /></button>
+          </div>
+        </article>
+        <article class="mini" data-name="running shoes sneakers">
+          <div class="mini__img">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=500&q=80" alt="Red running shoes" />
+            <div class="mini__stepper"><div class="qty"><button aria-label="Decrease quantity">−</button><span>1</span><button aria-label="Increase quantity">+</button></div></div>
+          </div>
+          <h3>Realfill ambru brusto</h3>
+          <p class="stars" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg></p>
+          <p class="mini__price" data-unit="199">$199.00</p>
+          <div class="mini__actions">
+            <button class="mini__cart"><img src="Assets/Icon/Add to Card Icon.svg" alt="" width="20" height="20" /> Add to Cart</button>
+            <button class="mini__view" aria-label="View product details"><img src="Assets/Icon/Show Product Details Icon.svg" alt="" width="20" height="20" /></button>
+          </div>
+        </article>
+        <article class="mini" data-name="minimal watch">
+          <div class="mini__img">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=500&q=80" alt="Minimal watch" />
+            <div class="mini__stepper"><div class="qty"><button aria-label="Decrease quantity">−</button><span>1</span><button aria-label="Increase quantity">+</button></div></div>
+          </div>
+          <h3>Realfill ambru brusto</h3>
+          <p class="stars" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg></p>
+          <p class="mini__price" data-unit="199">$199.00</p>
+          <div class="mini__actions">
+            <button class="mini__cart"><img src="Assets/Icon/Add to Card Icon.svg" alt="" width="20" height="20" /> Add to Cart</button>
+            <button class="mini__view" aria-label="View product details"><img src="Assets/Icon/Show Product Details Icon.svg" alt="" width="20" height="20" /></button>
+          </div>
+        </article>
+        <article class="mini" data-name="sunglasses">
+          <div class="mini__img">
+            <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=500&q=80" alt="Sunglasses" />
+            <div class="mini__stepper"><div class="qty"><button aria-label="Decrease quantity">−</button><span>1</span><button aria-label="Increase quantity">+</button></div></div>
+          </div>
+          <h3>Realfill ambru brusto</h3>
+          <p class="stars" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg></p>
+          <p class="mini__price" data-unit="199">$199.00</p>
+          <div class="mini__actions">
+            <button class="mini__cart"><img src="Assets/Icon/Add to Card Icon.svg" alt="" width="20" height="20" /> Add to Cart</button>
+            <button class="mini__view" aria-label="View product details"><img src="Assets/Icon/Show Product Details Icon.svg" alt="" width="20" height="20" /></button>
+          </div>
+        </article>
+        <article class="mini" data-name="camera">
+          <div class="mini__img">
+            <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=500&q=80" alt="Camera" />
+            <div class="mini__stepper"><div class="qty"><button aria-label="Decrease quantity">−</button><span>1</span><button aria-label="Increase quantity">+</button></div></div>
+          </div>
+          <h3>Realfill ambru brusto</h3>
+          <p class="stars" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg></p>
+          <p class="mini__price" data-unit="199">$199.00</p>
+          <div class="mini__actions">
+            <button class="mini__cart"><img src="Assets/Icon/Add to Card Icon.svg" alt="" width="20" height="20" /> Add to Cart</button>
+            <button class="mini__view" aria-label="View product details"><img src="Assets/Icon/Show Product Details Icon.svg" alt="" width="20" height="20" /></button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ══ Best sellers ══ -->
+    <section class="container section">
+      <div class="deals-bar">
+        <h2 class="section__title section__title--inline">Best Sellers</h2>
+        <a class="btn btn--primary btn--sm" href="#">View All <span class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      </div>
+      <div class="rail">
+        <article class="mini" data-name="white headphones">
+          <div class="mini__img">
+            <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=500&q=80" alt="White headphones" />
+            <div class="mini__stepper"><div class="qty"><button aria-label="Decrease quantity">−</button><span>1</span><button aria-label="Increase quantity">+</button></div></div>
+          </div>
+          <h3>Realfill ambru brusto</h3>
+          <p class="stars" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg></p>
+          <p class="mini__price" data-unit="199">$199.00</p>
+          <div class="mini__actions">
+            <button class="mini__cart"><img src="Assets/Icon/Add to Card Icon.svg" alt="" width="20" height="20" /> Add to Cart</button>
+            <button class="mini__view" aria-label="View product details"><img src="Assets/Icon/Show Product Details Icon.svg" alt="" width="20" height="20" /></button>
+          </div>
+        </article>
+        <article class="mini" data-name="smart watch">
+          <div class="mini__img">
+            <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=500&q=80" alt="Smart watch" />
+            <div class="mini__stepper"><div class="qty"><button aria-label="Decrease quantity">−</button><span>1</span><button aria-label="Increase quantity">+</button></div></div>
+          </div>
+          <h3>Realfill ambru brusto</h3>
+          <p class="stars" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg></p>
+          <p class="mini__price" data-unit="199">$199.00</p>
+          <div class="mini__actions">
+            <button class="mini__cart"><img src="Assets/Icon/Add to Card Icon.svg" alt="" width="20" height="20" /> Add to Cart</button>
+            <button class="mini__view" aria-label="View product details"><img src="Assets/Icon/Show Product Details Icon.svg" alt="" width="20" height="20" /></button>
+          </div>
+        </article>
+        <article class="mini" data-name="home decor lamp">
+          <div class="mini__img">
+            <img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=500&q=80" alt="Home decor lamp" />
+            <div class="mini__stepper"><div class="qty"><button aria-label="Decrease quantity">−</button><span>1</span><button aria-label="Increase quantity">+</button></div></div>
+          </div>
+          <h3>Realfill ambru brusto</h3>
+          <p class="stars" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg></p>
+          <p class="mini__price" data-unit="199">$199.00</p>
+          <div class="mini__actions">
+            <button class="mini__cart"><img src="Assets/Icon/Add to Card Icon.svg" alt="" width="20" height="20" /> Add to Cart</button>
+            <button class="mini__view" aria-label="View product details"><img src="Assets/Icon/Show Product Details Icon.svg" alt="" width="20" height="20" /></button>
+          </div>
+        </article>
+        <article class="mini" data-name="travel backpack bag">
+          <div class="mini__img">
+            <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=500&q=80" alt="Travel backpack" />
+            <div class="mini__stepper"><div class="qty"><button aria-label="Decrease quantity">−</button><span>1</span><button aria-label="Increase quantity">+</button></div></div>
+          </div>
+          <h3>Realfill ambru brusto</h3>
+          <p class="stars" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg></p>
+          <p class="mini__price" data-unit="199">$199.00</p>
+          <div class="mini__actions">
+            <button class="mini__cart"><img src="Assets/Icon/Add to Card Icon.svg" alt="" width="20" height="20" /> Add to Cart</button>
+            <button class="mini__view" aria-label="View product details"><img src="Assets/Icon/Show Product Details Icon.svg" alt="" width="20" height="20" /></button>
+          </div>
+        </article>
+        <article class="mini" data-name="premium watch">
+          <div class="mini__img">
+            <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=500&q=80" alt="Premium watch" />
+            <div class="mini__stepper"><div class="qty"><button aria-label="Decrease quantity">−</button><span>1</span><button aria-label="Increase quantity">+</button></div></div>
+          </div>
+          <h3>Realfill ambru brusto</h3>
+          <p class="stars" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg></p>
+          <p class="mini__price" data-unit="199">$199.00</p>
+          <div class="mini__actions">
+            <button class="mini__cart"><img src="Assets/Icon/Add to Card Icon.svg" alt="" width="20" height="20" /> Add to Cart</button>
+            <button class="mini__view" aria-label="View product details"><img src="Assets/Icon/Show Product Details Icon.svg" alt="" width="20" height="20" /></button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ══ Trio banners: square left + 2 stacked right ══ -->
+    <section class="container section">
+      <div class="trio trio--combo">
+        <article class="trio__square"><img src="Assets/Banner/Banner 3.png" alt="Headphone up to 30 percent off" /></article>
+        <div class="trio__stack">
+          <article class="trio__wide"><img src="Assets/Banner/Banner 4.png" alt="Watch up to 20 percent off" /></article>
+          <article class="trio__wide"><img src="Assets/Banner/Banner 5.jpg" alt="Speaker up to 20 percent off" /></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ Big save ══ -->
+    <section class="container section">
+      <div class="saves">
+        <article class="save save--blue">
+          <h3>Big Save</h3>
+          <p class="save__sub">Up to 40% off <span class="save__rating"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg> 4.8 (1,200+)</span></p>
+          <div class="save__items">
+            <a class="save__item" href="#">
+              <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=400&q=80" alt="White wireless headphones" />
+              <span class="save__name">Sneakers for Men</span>
+              <span class="save__stars"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg></span>
+              <span class="save__price">$199.00</span>
+            </a>
+            <a class="save__item" href="#">
+              <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=400&q=80" alt="Minimal steel watch" />
+              <span class="save__name">Sneakers for Men</span>
+              <span class="save__stars"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg></span>
+              <span class="save__price">$199.00</span>
+            </a>
+          </div>
+        </article>
+        <article class="save save--pink">
+          <h3>Big Save</h3>
+          <p class="save__sub">Up to 40% off <span class="save__rating"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg> 4.8 (1,200+)</span></p>
+          <div class="save__items">
+            <a class="save__item" href="#">
+              <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=400&q=80" alt="Essence perfume bottle" />
+              <span class="save__name">Sneakers for Men</span>
+              <span class="save__stars"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg></span>
+              <span class="save__price">$199.00</span>
+            </a>
+            <a class="save__item" href="#">
+              <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=400&q=80" alt="Classic sunglasses" />
+              <span class="save__name">Sneakers for Men</span>
+              <span class="save__stars"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg></span>
+              <span class="save__price">$199.00</span>
+            </a>
+          </div>
+        </article>
+        <article class="save save--mint">
+          <h3>Big Save</h3>
+          <p class="save__sub">Up to 40% off <span class="save__rating"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg> 4.8 (1,200+)</span></p>
+          <div class="save__items">
+            <a class="save__item" href="#">
+              <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=400&q=80" alt="Instant camera" />
+              <span class="save__name">Sneakers for Men</span>
+              <span class="save__stars"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg></span>
+              <span class="save__price">$199.00</span>
+            </a>
+            <a class="save__item" href="#">
+              <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=400&q=80" alt="Leather handbag" />
+              <span class="save__name">Sneakers for Men</span>
+              <span class="save__stars"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg></span>
+              <span class="save__price">$199.00</span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ══ Lifestyle banner ══ -->
+    <section class="container section">
+      <article class="life">
+        <div class="life__copy">
+          <p class="life__off">UP TO <em>57% OFF</em></p>
+          <p class="life__sub">on LifeStyle Essential</p>
+          <span class="life__from">From BDT. 499</span>
+        </div>
+        <div class="life__imgs">
+          <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=300&q=80" alt="Watch" />
+          <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=300&q=80" alt="Perfume" />
+          <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=300&q=80" alt="Headphones" />
+          <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=300&q=80" alt="Sunglasses" />
+        </div>
+      </article>
+    </section>
+
+    <!-- ══ New arrival rail 3 ══ -->
+    <section class="container section">
+      <div class="deals-bar">
+        <h2 class="section__title section__title--inline">Trending Now</h2>
+        <a class="btn btn--primary btn--sm" href="#">View All <span class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      </div>
+      <div class="rail">
+        <article class="mini" data-name="smart watch">
+          <div class="mini__img">
+            <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=500&q=80" alt="Smart watch" />
+            <div class="mini__stepper"><div class="qty"><button aria-label="Decrease quantity">−</button><span>1</span><button aria-label="Increase quantity">+</button></div></div>
+          </div>
+          <h3>Realfill ambru brusto</h3>
+          <p class="stars" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg></p>
+          <p class="mini__price" data-unit="199">$199.00</p>
+          <div class="mini__actions">
+            <button class="mini__cart"><img src="Assets/Icon/Add to Card Icon.svg" alt="" width="20" height="20" /> Add to Cart</button>
+            <button class="mini__view" aria-label="View product details"><img src="Assets/Icon/Show Product Details Icon.svg" alt="" width="20" height="20" /></button>
+          </div>
+        </article>
+        <article class="mini" data-name="home decor lamp">
+          <div class="mini__img">
+            <img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=500&q=80" alt="Home decor lamp" />
+            <div class="mini__stepper"><div class="qty"><button aria-label="Decrease quantity">−</button><span>1</span><button aria-label="Increase quantity">+</button></div></div>
+          </div>
+          <h3>Realfill ambru brusto</h3>
+          <p class="stars" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg></p>
+          <p class="mini__price" data-unit="199">$199.00</p>
+          <div class="mini__actions">
+            <button class="mini__cart"><img src="Assets/Icon/Add to Card Icon.svg" alt="" width="20" height="20" /> Add to Cart</button>
+            <button class="mini__view" aria-label="View product details"><img src="Assets/Icon/Show Product Details Icon.svg" alt="" width="20" height="20" /></button>
+          </div>
+        </article>
+        <article class="mini" data-name="smart device phone">
+          <div class="mini__img">
+            <img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=500&q=80" alt="Smart device" />
+            <div class="mini__stepper"><div class="qty"><button aria-label="Decrease quantity">−</button><span>1</span><button aria-label="Increase quantity">+</button></div></div>
+          </div>
+          <h3>Realfill ambru brusto</h3>
+          <p class="stars" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg></p>
+          <p class="mini__price" data-unit="199">$199.00</p>
+          <div class="mini__actions">
+            <button class="mini__cart"><img src="Assets/Icon/Add to Card Icon.svg" alt="" width="20" height="20" /> Add to Cart</button>
+            <button class="mini__view" aria-label="View product details"><img src="Assets/Icon/Show Product Details Icon.svg" alt="" width="20" height="20" /></button>
+          </div>
+        </article>
+        <article class="mini" data-name="premium watch">
+          <div class="mini__img">
+            <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=500&q=80" alt="Premium watch" />
+            <div class="mini__stepper"><div class="qty"><button aria-label="Decrease quantity">−</button><span>1</span><button aria-label="Increase quantity">+</button></div></div>
+          </div>
+          <h3>Realfill ambru brusto</h3>
+          <p class="stars" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg></p>
+          <p class="mini__price" data-unit="199">$199.00</p>
+          <div class="mini__actions">
+            <button class="mini__cart"><img src="Assets/Icon/Add to Card Icon.svg" alt="" width="20" height="20" /> Add to Cart</button>
+            <button class="mini__view" aria-label="View product details"><img src="Assets/Icon/Show Product Details Icon.svg" alt="" width="20" height="20" /></button>
+          </div>
+        </article>
+        <article class="mini" data-name="furniture sofa">
+          <div class="mini__img">
+            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=500&q=80" alt="Modern sofa" />
+            <div class="mini__stepper"><div class="qty"><button aria-label="Decrease quantity">−</button><span>1</span><button aria-label="Increase quantity">+</button></div></div>
+          </div>
+          <h3>Realfill ambru brusto</h3>
+          <p class="stars" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg></p>
+          <p class="mini__price" data-unit="199">$199.00</p>
+          <div class="mini__actions">
+            <button class="mini__cart"><img src="Assets/Icon/Add to Card Icon.svg" alt="" width="20" height="20" /> Add to Cart</button>
+            <button class="mini__view" aria-label="View product details"><img src="Assets/Icon/Show Product Details Icon.svg" alt="" width="20" height="20" /></button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- == Shop by brand == -->
+    <section class="container section brands">
+      <h2 class="brands__title">Featured brands</h2>
+      <div class="marquee" aria-label="Featured brands">
+        <div class="marquee__track" id="brandTrack">
+          <a class="brand-chip" href="#"><img src="Assets/Brands/samsung.svg" alt="Samsung" /></a>
+          <a class="brand-chip" href="#"><img src="Assets/Brands/xiaomi.svg" alt="Xiaomi" /></a>
+          <a class="brand-chip" href="#"><img src="Assets/Brands/apple.svg" alt="Apple" /></a>
+          <a class="brand-chip" href="#"><img src="Assets/Brands/realme.svg" alt="realme" /></a>
+          <a class="brand-chip" href="#"><img src="Assets/Brands/oppo.svg" alt="OPPO" /></a>
+          <!-- <a class="brand-chip brand-chip--sony" href="#"><img src="Assets/Brands/sony.svg" alt="Sony" /></a> -->
+          <a class="brand-chip" href="#"><img src="Assets/Brands/hp.svg" alt="HP" /></a>
+          <a class="brand-chip" href="#"><img src="Assets/Brands/anker.svg" alt="Anker" /></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ══ Footer ══ -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="f-col">
+        <h4>Support</h4>
+        <a class="f-contact" href="tel:+8801700000000"><span class="icon icon-24"><svg viewBox="0 0 24 24"><path d="M6.6 3h3l1.5 4.5-2 1.5a12 12 0 0 0 5.9 5.9l1.5-2L21 14.4v3c0 .6-.4 1-1 1C10.6 18.4 5.6 13.4 5.6 4c0-.6.4-1 1-1z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><span>09612-345678<br />+880 1700-000000</span></a>
+        <a class="f-contact" href="#"><span class="icon icon-24"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span><span>Find Our Store</span></a>
+        <div class="f-social">
+          <a href="#" aria-label="Facebook" class="icon icon-24"><svg viewBox="0 0 24 24"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7h2.5z"/></svg></a>
+          <a href="#" aria-label="X" class="icon icon-24"><svg viewBox="0 0 24 24"><path d="M17.5 4h2.9l-6.4 7.3L21.5 20h-5.9l-4.6-6-5.3 6H2.8l6.9-7.8L2.5 4h6l4.2 5.5L17.5 4zm-1 14.3h1.6L7.7 5.5H6L16.5 18.3z"/></svg></a>
+          <a href="#" aria-label="Instagram" class="icon icon-24"><svg viewBox="0 0 24 24"><path d="M12 8.8A3.2 3.2 0 1 0 12 15.2 3.2 3.2 0 0 0 12 8.8zm0-2.1a5.3 5.3 0 1 1 0 10.6 5.3 5.3 0 0 1 0-10.6zm6.8-.3a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0zM12 4.2c-2.5 0-2.8 0-3.8.1-1 .1-1.6.2-2.1.4-.6.2-1 .5-1.4.9-.4.4-.7.8-.9 1.4-.2.5-.3 1.1-.4 2.1-.1 1-.1 1.3-.1 3.8s0 2.8.1 3.8c.1 1 .2 1.6.4 2.1.2.6.5 1 .9 1.4.4.4.8.7 1.4.9.5.2 1.1.3 2.1.4 1 .1 1.3.1 3.8.1s2.8 0 3.8-.1c1-.1 1.6-.2 2.1-.4.6-.2 1-.5 1.4-.9.4-.4.7-.8.9-1.4.2-.5.3-1.1.4-2.1.1-1 .1-1.3.1-3.8s0-2.8-.1-3.8c-.1-1-.2-1.6-.4-2.1-.2-.6-.5-1-.9-1.4-.4-.4-.8-.7-1.4-.9-.5-.2-1.1-.3-2.1-.4-1-.1-1.3-.1-3.8-.1z"/></svg></a>
+          <a href="#" aria-label="YouTube" class="icon icon-24"><svg viewBox="0 0 24 24"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8c1.6.4 7.8.4 7.8.4s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3L10 15z"/></svg></a>
+        </div>
+      </div>
+      <div class="f-col">
+        <h4>About Us</h4>
+        <a href="#">Value Added</a>
+        <a href="#">Careers</a>
+        <a href="#">Press</a>
+        <a href="#">Blog</a>
+        <a href="#">Order Tracking</a>
+      </div>
+      <div class="f-col">
+        <h4>Help</h4>
+        <a href="#">Contact Us</a>
+        <a href="#">FAQs</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms &amp; Conditions</a>
+        <a href="#">Return &amp; Refund Policy</a>
+      </div>
+      <div class="f-col">
+        <h4>Call Us</h4>
+        <a class="f-contact" href="tel:+8801700000000"><span class="icon icon-24"><svg viewBox="0 0 24 24"><path d="M6.6 3h3l1.5 4.5-2 1.5a12 12 0 0 0 5.9 5.9l1.5-2L21 14.4v3c0 .6-.4 1-1 1C10.6 18.4 5.6 13.4 5.6 4c0-.6.4-1 1-1z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><span>09612-345678<br />+880 1700-000000</span></a>
+        <a class="f-contact" href="mailto:support@ecom.com"><span class="icon icon-24"><svg viewBox="0 0 24 24"><path d="M3 5h18v14H3zM3 6l9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><span>support@ecom.com</span></a>
+        <p class="f-contact"><span class="icon icon-24"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span><span>House 12, Road 5, Dhaka, Bangladesh</span></p>
+      </div>
+    </div>
+    <div class="footer__bar">
+      <div class="container footer__bar-inner">
+        <div class="pay" aria-label="Accepted payments">
+          <span class="pay__visa">VISA</span>
+          <span class="pay__mc"><i></i><i></i>Mastercard</span>
+          <span class="pay__amex">AMEX</span>
+          <span class="pay__bkash">bKash</span>
+          <span class="pay__nagad">Nagad</span>
+          <span class="pay__cod">COD</span>
+        </div>
+        <p>© 2026 E-com. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
