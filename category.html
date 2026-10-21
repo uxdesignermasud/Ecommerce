@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-com — Men's collection</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="store.js"></script>
+</head>
+<body>
+
+  <!-- ══ Top utility bar ══ -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__social">
+        <span>Follow Us:</span>
+        <a href="#" aria-label="Facebook" class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7h2.5z"/></svg></a>
+        <a href="#" aria-label="X" class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M17.5 4h2.9l-6.4 7.3L21.5 20h-5.9l-4.6-6-5.3 6H2.8l6.9-7.8L2.5 4h6l4.2 5.5L17.5 4zm-1 14.3h1.6L7.7 5.5H6L16.5 18.3z"/></svg></a>
+        <a href="#" aria-label="Instagram" class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M12 8.8A3.2 3.2 0 1 0 12 15.2 3.2 3.2 0 0 0 12 8.8zm0-2.1a5.3 5.3 0 1 1 0 10.6 5.3 5.3 0 0 1 0-10.6zm6.8-.3a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0zM12 4.2c-2.5 0-2.8 0-3.8.1-1 .1-1.6.2-2.1.4-.6.2-1 .5-1.4.9-.4.4-.7.8-.9 1.4-.2.5-.3 1.1-.4 2.1-.1 1-.1 1.3-.1 3.8s0 2.8.1 3.8c.1 1 .2 1.6.4 2.1.2.6.5 1 .9 1.4.4.4.8.7 1.4.9.5.2 1.1.3 2.1.4 1 .1 1.3.1 3.8.1s2.8 0 3.8-.1c1-.1 1.6-.2 2.1-.4.6-.2 1-.5 1.4-.9.4-.4.7-.8.9-1.4.2-.5.3-1.1.4-2.1.1-1 .1-1.3.1-3.8s0-2.8-.1-3.8c-.1-1-.2-1.6-.4-2.1-.2-.6-.5-1-.9-1.4-.4-.4-.8-.7-1.4-.9-.5-.2-1.1-.3-2.1-.4-1-.1-1.3-.1-3.8-.1z"/></svg></a>
+        <a href="#" aria-label="YouTube" class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8c1.6.4 7.8.4 7.8.4s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3L10 15z"/></svg></a>
+      </div>
+      <p class="topbar__promo">Extra 10% off on $1000 <a href="#">Shop Now</a></p>
+      <div class="topbar__links">
+        <a href="#">Track your order</a>
+        <span class="divider">|</span>
+        <button class="lang">English <span class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ Main header ══ -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="index.html">
+        <img src="Assets/Icon/E com Logo.svg" alt="E-com logo" width="163" height="50" />
+      </a>
+      <div class="header__actions">
+        <div class="searchwrap">
+          <form class="search" role="search" id="searchForm">
+            <div class="search__cat">
+              <button type="button" id="searchCatBtn" aria-expanded="false" aria-haspopup="listbox">
+                <span id="searchCatLabel">All</span>
+                <span class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </button>
+              <ul class="search__menu" id="searchCatMenu" role="listbox" hidden>
+                <li><button type="button" class="active" data-value="all" role="option">All</button></li>
+                <li><button type="button" data-value="mobiles" role="option">Mobiles &amp; Tab</button></li>
+                <li><button type="button" data-value="electronics" role="option">Electronics</button></li>
+                <li><button type="button" data-value="womens" role="option">Women's Fashion</button></li>
+                <li><button type="button" data-value="mens" role="option">Men's Fashion</button></li>
+                <li><button type="button" data-value="beauty" role="option">Beauty</button></li>
+                <li><button type="button" data-value="home" role="option">Home &amp; Living</button></li>
+                <li><button type="button" data-value="appliances" role="option">Appliances</button></li>
+                <li><button type="button" data-value="baby" role="option">Baby &amp; Kids</button></li>
+                <li><button type="button" data-value="sports" role="option">Sports</button></li>
+              </ul>
+            </div>
+            <input type="search" id="searchInput" placeholder="Search phones, beauty, home & more…" aria-label="Search products" autocomplete="off" />
+            <button type="button" class="search__tool" id="imgSearchBtn" aria-label="Search by image" title="Search by image">
+              <svg viewBox="0 0 24 24"><path d="M4 8h3l2-2.5h6L17 8h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1zm8 9a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0-2a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg>
+            </button>
+            <button type="button" class="search__tool search__mic" id="voiceBtn" aria-label="Voice search" title="Voice search"><svg viewBox="0 0 24 24"><path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v6a3 3 0 0 0 3 3zm6-3a6 6 0 0 1-12 0H4a8 8 0 0 0 7 7.94V22h2v-2.06A8 8 0 0 0 20 12h-2z"/></svg></button>
+              <button type="submit" class="search__go" aria-label="Search" title="Search">
+              <svg viewBox="0 0 24 24"><path d="M10 2a8 8 0 1 0 4.9 14.3l4 4 1.4-1.4-4-4A8 8 0 0 0 10 2zm0 2a6 6 0 1 1 0 12 6 6 0 0 1 0-12z"/></svg>
+              <span>Search</span>
+            </button>
+          </form>
+          <input type="file" id="imgSearchInput" accept="image/*" hidden />
+<div class="img-panel" id="imgPanel" hidden>
+            <img id="imgPreview" alt="Uploaded search image" />
+            <p>Image added — showing visually similar picks below.</p>
+          </div>
+        </div>
+        <a href="auth.html" class="h-icon" aria-label="Sign in"><img src="Assets/Icon/User Profile.svg" alt="" width="24" height="24" /><span>Sign in</span></a>
+        <a href="#" class="h-icon" aria-label="Wishlist"><img src="Assets/Icon/Fav.svg" alt="" width="24" height="24" /><span>Wishlist</span></a>
+        <a href="#" class="h-icon" aria-label="Cart"><img src="Assets/Icon/Cart.svg" alt="" width="24" height="24" /><span>Cart</span></a>
+      </div>
+    </div>
+    <!-- ══ Category strip below header ══ -->
+    <div class="catstrip">
+      <div class="container catstrip__inner">
+        <button class="catstrip__all" id="allCatsBtn" aria-expanded="false"><span class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg></span> All Categories <span class="icon icon-16 catstrip__chev"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+        <nav class="catstrip__nav" aria-label="Categories">
+          <a href="category.html">Fashion</a>
+          <a href="category.html">Electronics &amp; Gadget</a>
+          <a href="category.html">Appliances</a>
+          <a href="category.html">Mobiles &amp; Tablets</a>
+          <a href="category.html">Kitchen &amp; Dining</a>
+          <a href="category.html">Travel Accessories</a>
+          <a href="category.html">Bags &amp; Luggage</a>
+          <a href="category.html">Personal Care</a>
+          <a href="category.html">Food &amp; Grocery</a>
+        </nav>
+      </div>
+      <!-- ══ Mega menu (opens on All Categories click) ══ -->
+      <div class="megamenu" id="megaMenu" hidden>
+        <div class="container megamenu__inner">
+          <ul class="megamenu__side" id="megaSide"></ul>
+          <div class="megamenu__main">
+            <div class="megamenu__head">
+              <h3 id="megaTitle">Fashion</h3>
+              <a href="#">View all <span class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+            </div>
+            <div class="megamenu__subs" id="megaSubs"></div>
+          </div>
+          <aside class="megamenu__explore">
+            <p class="explore__kicker">Explore</p>
+            <h4 id="exploreTitle">Fashion</h4>
+            <p id="exploreText">Browse the top picks in fashion from verified sellers.</p>
+            <a class="btn btn--primary btn--sm" href="#">Shop now <span class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+            <p class="explore__note"><span class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M3 7h11v8H3zM14 10h4l3 3v2h-7zM6 19a1.8 1.8 0 1 0 0-3.6A1.8 1.8 0 0 0 6 19zm11 0a1.8 1.8 0 1 0 0-3.6 1.8 1.8 0 0 0 0 3.6z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span> 100% Cash on Delivery</p>
+            <p class="explore__note"><span class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M3 7h11v8H3zM14 10h4l3 3v2h-7zM6 19a1.8 1.8 0 1 0 0-3.6A1.8 1.8 0 0 0 6 19zm11 0a1.8 1.8 0 1 0 0-3.6 1.8 1.8 0 0 0 0 3.6z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span> Fast home delivery</p>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </header>
+
+    <main>
+    <!-- ══ Category: Men's collection ══ -->
+    <div class="container catpage">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span>&gt;</span>
+        <a href="category.html">Categories</a>
+        <span>&gt;</span>
+        <span class="crumbs__current">Men's collection</span>
+      </nav>
+
+      <div class="catpage__layout">
+        <!-- ══ Sidebar ══ -->
+        <aside class="catside">
+          <section class="sidebox">
+            <h3 class="sidebox__title sidebox__title--red">Categories</h3>
+            <ul class="sidebox__checks">
+              <li><label><input type="checkbox" checked /><span>T-Shirt</span></label></li>
+              <li><label><input type="checkbox" checked /><span>Polo Shirt</span></label></li>
+              <li><label><input type="checkbox" /><span>Casual Shirt</span></label></li>
+              <li><label><input type="checkbox" /><span>Jeans</span></label></li>
+              <li><label><input type="checkbox" /><span>Panjabi</span></label></li>
+              <li><label><input type="checkbox" /><span>Fotua</span></label></li>
+              <li><label><input type="checkbox" /><span>Hoodie</span></label></li>
+              <li><label><input type="checkbox" /><span>Sweatshirt</span></label></li>
+              <li><label><input type="checkbox" /><span>Blazer</span></label></li>
+              <li><label><input type="checkbox" /><span>Overcoat</span></label></li>
+              <li><label><input type="checkbox" /><span>Joggers</span></label></li>
+              <li><label><input type="checkbox" /><span>Kurta</span></label></li>
+            </ul>
+          </section>
+
+          <section class="sidebox">
+            <h3 class="sidebox__title">Filter by price</h3>
+            <div class="price">
+              <div class="price__labels"><span>Min 0</span><span>Max 1000</span></div>
+              <input type="range" id="priceRange" min="0" max="1000" value="1000" step="10" aria-label="Maximum price" />
+              <div class="price__val"><span>0</span><span id="priceMax">1000</span></div>
+            </div>
+          </section>
+
+          <section class="sidebox">
+            <h3 class="sidebox__title">Brands</h3>
+            <ul class="sidebox__checks">
+              <li><label><input type="checkbox" checked /><span>Gucci</span></label></li>
+              <li><label><input type="checkbox" checked /><span>Louis Vuitton</span></label></li>
+              <li><label><input type="checkbox" /><span>Armani</span></label></li>
+              <li><label><input type="checkbox" /><span>Hugo Boss</span></label></li>
+              <li><label><input type="checkbox" /><span>Ralph Lauren</span></label></li>
+              <li><label><input type="checkbox" /><span>Nike</span></label></li>
+              <li><label><input type="checkbox" /><span>Adidas</span></label></li>
+              <li><label><input type="checkbox" /><span>Zara</span></label></li>
+            </ul>
+            <a class="sidebox__more" href="#">View all</a>
+          </section>
+
+          <section class="sidebox">
+            <h3 class="sidebox__title">Popular tags</h3>
+            <div class="tagcloud">
+              <button type="button">Fashion</button>
+              <button type="button">Cotton</button>
+              <button type="button">Denim</button>
+              <button type="button">Winter</button>
+              <button type="button">Classic</button>
+              <button type="button">Premium</button>
+              <button type="button">Casual</button>
+              <button type="button">New</button>
+            </div>
+            <a class="sidebox__more" href="#">View all</a>
+          </section>
+        </aside>
+
+        <!-- ══ Products ══ -->
+        <section class="catmain">
+          <div class="catbar">
+            <label class="catbar__item">Sort by
+              <select id="sortSel">
+                <option value="position">Position</option>
+                <option value="name">Name</option>
+                <option value="low">Price: Low to High</option>
+                <option value="high">Price: High to Low</option>
+              </select>
+            </label>
+            <label class="catbar__item">Display
+              <select id="displaySel">
+                <option value="12" selected>12</option>
+                <option value="20">20</option>
+                <option value="32">32</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="pgrid" id="pgrid"></div>
+
+          <nav class="paging" id="paging" aria-label="Pagination"></nav>
+        </section>
+      </div>
+    </div>
+
+    <script>
+      const STAR = '<svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg>';
+      const grid = document.getElementById("pgrid");
+      const paging = document.getElementById("paging");
+      const sortSel = document.getElementById("sortSel");
+      const displaySel = document.getElementById("displaySel");
+      const priceRange = document.getElementById("priceRange");
+      const priceMax = document.getElementById("priceMax");
+      const params = new URLSearchParams(location.search);
+      const q0 = (params.get("q") || "").toLowerCase();
+      const cat0 = params.get("cat") || "all";
+      const sub0 = params.get("sub") || "";
+      let page = 1;
+      const activeSubs = new Set(sub0 ? [sub0] : []);
+
+      // Build sidebar from real catalog sub-categories
+      (function buildSide(){
+        const box = document.querySelector(".sidebox__checks");
+        if (!box) return;
+        const subs = [...new Set(window.ECOM_PRODUCTS.map(p=>p.sub))].slice(0, 12);
+        box.innerHTML = subs.map(s=>'<li><label><input type="checkbox" value="'+s+'"'+(activeSubs.has(s)?" checked":"")+' /><span>'+s+'</span></label></li>').join("");
+        box.addEventListener("change", ()=>{ activeSubs.clear(); box.querySelectorAll("input:checked").forEach(i=>activeSubs.add(i.value)); page=1; render(); });
+        const crumb = document.querySelector(".crumbs__current");
+        if (crumb) crumb.textContent = sub0 || params.get("cat") || (q0 ? 'Search: '+params.get("q") : "All products");
+      })();
+
+      function starRow(n) {
+        let s = "";
+        for (let i = 0; i < 5; i++) s += STAR;
+        return '<p class="stars" aria-label="Rated ' + n + ' out of 5">' + s + "</p>";
+      }
+
+      function getList() {
+        const max = parseInt(priceRange.value, 10);
+        let list = window.ECOM_PRODUCTS.filter((p) => p.price <= max);
+        if (q0) list = list.filter(p => (p.name+" "+p.brand+" "+p.cat+" "+p.sub).toLowerCase().includes(q0));
+        if (cat0 && cat0 !== "all") list = list.filter(p => p.cat === cat0 || p.sub === cat0);
+        if (activeSubs.size) list = list.filter(p => activeSubs.has(p.sub));
+        const mode = sortSel.value;
+        if (mode === "name") list = [...list].sort((a, b) => a.name.localeCompare(b.name));
+        if (mode === "low") list = [...list].sort((a, b) => a.price - b.price);
+        if (mode === "high") list = [...list].sort((a, b) => b.price - a.price);
+        return list;
+      }
+
+      function render() {
+        const list = getList();
+        const per = parseInt(displaySel.value, 10);
+        const pages = Math.max(1, Math.ceil(list.length / per));
+        page = Math.min(Math.max(1, page), pages);
+        const items = list.slice((page - 1) * per, page * per);
+        grid.innerHTML = items.length ? items.map((p) => window.ECOM_card(p)).join("") : '<div class="co-card"><h2>No products found</h2><p style="font-size:.85rem">Try another keyword or clear filters.</p></div>';
+        let btns = "";
+        for (let i = 1; i <= pages; i++) btns += '<button type="button" data-pg="' + i + '"' + (i === page ? ' class="active"' : "") + ">" + i + "</button>";
+        if (pages > 1) btns += '<button type="button" data-pg="' + Math.min(pages, page + 1) + '" aria-label="Next page">></button>';
+        paging.innerHTML = btns;
+      }
+
+      paging.addEventListener("click", (e) => {
+        const b = e.target.closest("button[data-pg]");
+        if (!b) return;
+        page = parseInt(b.dataset.pg, 10);
+        render();
+      });
+      sortSel.addEventListener("change", () => { page = 1; render(); });
+      displaySel.addEventListener("change", () => { page = 1; render(); });
+      priceRange.addEventListener("input", () => { priceMax.textContent = priceRange.value; page = 1; render(); });
+      document.querySelectorAll(".tagcloud button").forEach((b) => b.addEventListener("click", () => b.classList.toggle("active")));
+      render();
+    </script>
+  </main>
+
+
+  <!-- ══ Footer ══ -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="f-col">
+        <h4>Support</h4>
+        <a class="f-contact" href="tel:+8801700000000"><span class="icon icon-24"><svg viewBox="0 0 24 24"><path d="M6.6 3h3l1.5 4.5-2 1.5a12 12 0 0 0 5.9 5.9l1.5-2L21 14.4v3c0 .6-.4 1-1 1C10.6 18.4 5.6 13.4 5.6 4c0-.6.4-1 1-1z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><span>09612-345678<br />+880 1700-000000</span></a>
+        <a class="f-contact" href="#"><span class="icon icon-24"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span><span>Find Our Store</span></a>
+        <div class="f-social">
+          <a href="#" aria-label="Facebook" class="icon icon-24"><svg viewBox="0 0 24 24"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7h2.5z"/></svg></a>
+          <a href="#" aria-label="X" class="icon icon-24"><svg viewBox="0 0 24 24"><path d="M17.5 4h2.9l-6.4 7.3L21.5 20h-5.9l-4.6-6-5.3 6H2.8l6.9-7.8L2.5 4h6l4.2 5.5L17.5 4zm-1 14.3h1.6L7.7 5.5H6L16.5 18.3z"/></svg></a>
+          <a href="#" aria-label="Instagram" class="icon icon-24"><svg viewBox="0 0 24 24"><path d="M12 8.8A3.2 3.2 0 1 0 12 15.2 3.2 3.2 0 0 0 12 8.8zm0-2.1a5.3 5.3 0 1 1 0 10.6 5.3 5.3 0 0 1 0-10.6zm6.8-.3a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0zM12 4.2c-2.5 0-2.8 0-3.8.1-1 .1-1.6.2-2.1.4-.6.2-1 .5-1.4.9-.4.4-.7.8-.9 1.4-.2.5-.3 1.1-.4 2.1-.1 1-.1 1.3-.1 3.8s0 2.8.1 3.8c.1 1 .2 1.6.4 2.1.2.6.5 1 .9 1.4.4.4.8.7 1.4.9.5.2 1.1.3 2.1.4 1 .1 1.3.1 3.8.1s2.8 0 3.8-.1c1-.1 1.6-.2 2.1-.4.6-.2 1-.5 1.4-.9.4-.4.7-.8.9-1.4.2-.5.3-1.1.4-2.1.1-1 .1-1.3.1-3.8s0-2.8-.1-3.8c-.1-1-.2-1.6-.4-2.1-.2-.6-.5-1-.9-1.4-.4-.4-.8-.7-1.4-.9-.5-.2-1.1-.3-2.1-.4-1-.1-1.3-.1-3.8-.1z"/></svg></a>
+          <a href="#" aria-label="YouTube" class="icon icon-24"><svg viewBox="0 0 24 24"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8c1.6.4 7.8.4 7.8.4s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3L10 15z"/></svg></a>
+        </div>
+      </div>
+      <div class="f-col">
+        <h4>About Us</h4>
+        <a href="#">Value Added</a>
+        <a href="#">Careers</a>
+        <a href="#">Press</a>
+        <a href="#">Blog</a>
+        <a href="#">Order Tracking</a>
+      </div>
+      <div class="f-col">
+        <h4>Help</h4>
+        <a href="#">Contact Us</a>
+        <a href="#">FAQs</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms &amp; Conditions</a>
+        <a href="#">Return &amp; Refund Policy</a>
+      </div>
+      <div class="f-col">
+        <h4>Call Us</h4>
+        <a class="f-contact" href="tel:+8801700000000"><span class="icon icon-24"><svg viewBox="0 0 24 24"><path d="M6.6 3h3l1.5 4.5-2 1.5a12 12 0 0 0 5.9 5.9l1.5-2L21 14.4v3c0 .6-.4 1-1 1C10.6 18.4 5.6 13.4 5.6 4c0-.6.4-1 1-1z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><span>09612-345678<br />+880 1700-000000</span></a>
+        <a class="f-contact" href="mailto:support@ecom.com"><span class="icon icon-24"><svg viewBox="0 0 24 24"><path d="M3 5h18v14H3zM3 6l9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><span>support@ecom.com</span></a>
+        <p class="f-contact"><span class="icon icon-24"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span><span>House 12, Road 5, Dhaka, Bangladesh</span></p>
+      </div>
+    </div>
+    <div class="footer__bar">
+      <div class="container footer__bar-inner">
+        <div class="pay" aria-label="Accepted payments">
+          <span class="pay__visa">VISA</span>
+          <span class="pay__mc"><i></i><i></i>Mastercard</span>
+          <span class="pay__amex">AMEX</span>
+          <span class="pay__bkash">bKash</span>
+          <span class="pay__nagad">Nagad</span>
+          <span class="pay__cod">COD</span>
+        </div>
+        <p>© 2026 E-com. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

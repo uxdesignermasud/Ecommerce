@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-com — Product details</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="store.js"></script>
+</head>
+<body>
+
+  <!-- ══ Top utility bar ══ -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__social">
+        <span>Follow Us:</span>
+        <a href="#" aria-label="Facebook" class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7h2.5z"/></svg></a>
+        <a href="#" aria-label="X" class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M17.5 4h2.9l-6.4 7.3L21.5 20h-5.9l-4.6-6-5.3 6H2.8l6.9-7.8L2.5 4h6l4.2 5.5L17.5 4zm-1 14.3h1.6L7.7 5.5H6L16.5 18.3z"/></svg></a>
+        <a href="#" aria-label="Instagram" class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M12 8.8A3.2 3.2 0 1 0 12 15.2 3.2 3.2 0 0 0 12 8.8zm0-2.1a5.3 5.3 0 1 1 0 10.6 5.3 5.3 0 0 1 0-10.6zm6.8-.3a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0zM12 4.2c-2.5 0-2.8 0-3.8.1-1 .1-1.6.2-2.1.4-.6.2-1 .5-1.4.9-.4.4-.7.8-.9 1.4-.2.5-.3 1.1-.4 2.1-.1 1-.1 1.3-.1 3.8s0 2.8.1 3.8c.1 1 .2 1.6.4 2.1.2.6.5 1 .9 1.4.4.4.8.7 1.4.9.5.2 1.1.3 2.1.4 1 .1 1.3.1 3.8.1s2.8 0 3.8-.1c1-.1 1.6-.2 2.1-.4.6-.2 1-.5 1.4-.9.4-.4.7-.8.9-1.4.2-.5.3-1.1.4-2.1.1-1 .1-1.3.1-3.8s0-2.8-.1-3.8c-.1-1-.2-1.6-.4-2.1-.2-.6-.5-1-.9-1.4-.4-.4-.8-.7-1.4-.9-.5-.2-1.1-.3-2.1-.4-1-.1-1.3-.1-3.8-.1z"/></svg></a>
+        <a href="#" aria-label="YouTube" class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8c1.6.4 7.8.4 7.8.4s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3L10 15z"/></svg></a>
+      </div>
+      <p class="topbar__promo">Extra 10% off on $1000 <a href="#">Shop Now</a></p>
+      <div class="topbar__links">
+        <a href="#">Track your order</a>
+        <span class="divider">|</span>
+        <button class="lang">English <span class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ Main header ══ -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="index.html">
+        <img src="Assets/Icon/E com Logo.svg" alt="E-com logo" width="163" height="50" />
+      </a>
+      <div class="header__actions">
+        <div class="searchwrap">
+          <form class="search" role="search" id="searchForm">
+            <div class="search__cat">
+              <button type="button" id="searchCatBtn" aria-expanded="false" aria-haspopup="listbox">
+                <span id="searchCatLabel">All</span>
+                <span class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </button>
+              <ul class="search__menu" id="searchCatMenu" role="listbox" hidden>
+                <li><button type="button" class="active" data-value="all" role="option">All</button></li>
+                <li><button type="button" data-value="mobiles" role="option">Mobiles &amp; Tab</button></li>
+                <li><button type="button" data-value="electronics" role="option">Electronics</button></li>
+                <li><button type="button" data-value="womens" role="option">Women's Fashion</button></li>
+                <li><button type="button" data-value="mens" role="option">Men's Fashion</button></li>
+                <li><button type="button" data-value="beauty" role="option">Beauty</button></li>
+                <li><button type="button" data-value="home" role="option">Home &amp; Living</button></li>
+                <li><button type="button" data-value="appliances" role="option">Appliances</button></li>
+                <li><button type="button" data-value="baby" role="option">Baby &amp; Kids</button></li>
+                <li><button type="button" data-value="sports" role="option">Sports</button></li>
+              </ul>
+            </div>
+            <input type="search" id="searchInput" placeholder="Search phones, beauty, home & more…" aria-label="Search products" autocomplete="off" />
+            <button type="button" class="search__tool" id="imgSearchBtn" aria-label="Search by image" title="Search by image">
+              <svg viewBox="0 0 24 24"><path d="M4 8h3l2-2.5h6L17 8h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1zm8 9a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0-2a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg>
+            </button>
+            <button type="button" class="search__tool search__mic" id="voiceBtn" aria-label="Voice search" title="Voice search"><svg viewBox="0 0 24 24"><path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v6a3 3 0 0 0 3 3zm6-3a6 6 0 0 1-12 0H4a8 8 0 0 0 7 7.94V22h2v-2.06A8 8 0 0 0 20 12h-2z"/></svg></button>
+              <button type="submit" class="search__go" aria-label="Search" title="Search">
+              <svg viewBox="0 0 24 24"><path d="M10 2a8 8 0 1 0 4.9 14.3l4 4 1.4-1.4-4-4A8 8 0 0 0 10 2zm0 2a6 6 0 1 1 0 12 6 6 0 0 1 0-12z"/></svg>
+              <span>Search</span>
+            </button>
+          </form>
+          <input type="file" id="imgSearchInput" accept="image/*" hidden />
+<div class="img-panel" id="imgPanel" hidden>
+            <img id="imgPreview" alt="Uploaded search image" />
+            <p>Image added — showing visually similar picks below.</p>
+          </div>
+        </div>
+        <a href="auth.html" class="h-icon" aria-label="Sign in"><img src="Assets/Icon/User Profile.svg" alt="" width="24" height="24" /><span>Sign in</span></a>
+        <a href="#" class="h-icon" aria-label="Wishlist"><img src="Assets/Icon/Fav.svg" alt="" width="24" height="24" /><span>Wishlist</span></a>
+        <a href="#" class="h-icon" aria-label="Cart"><img src="Assets/Icon/Cart.svg" alt="" width="24" height="24" /><span>Cart</span></a>
+      </div>
+    </div>
+    <!-- ══ Category strip below header ══ -->
+    <div class="catstrip">
+      <div class="container catstrip__inner">
+        <button class="catstrip__all" id="allCatsBtn" aria-expanded="false"><span class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg></span> All Categories <span class="icon icon-16 catstrip__chev"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+        <nav class="catstrip__nav" aria-label="Categories">
+          <a href="category.html">Fashion</a>
+          <a href="category.html">Electronics &amp; Gadget</a>
+          <a href="category.html">Appliances</a>
+          <a href="category.html">Mobiles &amp; Tablets</a>
+          <a href="category.html">Kitchen &amp; Dining</a>
+          <a href="category.html">Travel Accessories</a>
+          <a href="category.html">Bags &amp; Luggage</a>
+          <a href="category.html">Personal Care</a>
+          <a href="category.html">Food &amp; Grocery</a>
+        </nav>
+      </div>
+      <!-- ══ Mega menu (opens on All Categories click) ══ -->
+      <div class="megamenu" id="megaMenu" hidden>
+        <div class="container megamenu__inner">
+          <ul class="megamenu__side" id="megaSide"></ul>
+          <div class="megamenu__main">
+            <div class="megamenu__head">
+              <h3 id="megaTitle">Fashion</h3>
+              <a href="#">View all <span class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+            </div>
+            <div class="megamenu__subs" id="megaSubs"></div>
+          </div>
+          <aside class="megamenu__explore">
+            <p class="explore__kicker">Explore</p>
+            <h4 id="exploreTitle">Fashion</h4>
+            <p id="exploreText">Browse the top picks in fashion from verified sellers.</p>
+            <a class="btn btn--primary btn--sm" href="#">Shop now <span class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+            <p class="explore__note"><span class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M3 7h11v8H3zM14 10h4l3 3v2h-7zM6 19a1.8 1.8 0 1 0 0-3.6A1.8 1.8 0 0 0 6 19zm11 0a1.8 1.8 0 1 0 0-3.6 1.8 1.8 0 0 0 0 3.6z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span> 100% Cash on Delivery</p>
+            <p class="explore__note"><span class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M3 7h11v8H3zM14 10h4l3 3v2h-7zM6 19a1.8 1.8 0 1 0 0-3.6A1.8 1.8 0 0 0 6 19zm11 0a1.8 1.8 0 1 0 0-3.6 1.8 1.8 0 0 0 0 3.6z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span> Fast home delivery</p>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container pd">
+      <a class="pd__back" href="category.html">&#8249; Back to previous page</a>
+      <section class="pd__top" id="pdTop" aria-live="polite"><p style="padding:24px;color:#666">Loading product…</p></section>
+      <section aria-label="Product information">
+        <div class="tabs" role="tablist" id="pdTabs">
+          <button role="tab" class="active" data-tab="spec" aria-selected="true">Specification</button>
+          <button role="tab" data-tab="desc" aria-selected="false">Description</button>
+          <button role="tab" data-tab="faq" aria-selected="false" id="tabFaq">Questions(3)</button>
+          <button role="tab" data-tab="rev" aria-selected="false" id="tabRev">Reviews(0)</button>
+        </div>
+        <div class="pd__panes">
+        <div id="tab-spec" role="tabpanel"><div class="spec" id="pdSpec" style="margin-top:16px"></div><div class="co-card" style="margin-top:16px" id="pdDescInline"></div></div>
+        <div id="tab-desc" role="tabpanel" hidden><div class="co-card" style="margin-top:16px" id="pdDesc"></div></div>
+        <div id="tab-faq" role="tabpanel" hidden><div class="faq" style="margin-top:16px" id="pdFaq"></div></div>
+        <div id="tab-rev" role="tabpanel" hidden>
+          <section class="rvsec" style="margin-top:16px">
+            <div class="rvsec__head">
+              <div><h2 id="rvTitle">Reviews (0)</h2><p class="rvsec__sub" id="rvSub">Get specific details about this product from customers who own it.</p><p class="rvsec__avg" id="rvAvg"></p></div>
+              <button type="button" class="btn btn--outline-blue btn--sm" id="rvWrite">Write a Review</button>
+            </div>
+            <div class="rvsec__grid"><div class="rv__list" id="rvList"></div></div>
+          </section>
+        </div>
+        </div>
+      </section>
+      <div class="modal" id="rvModal" hidden role="dialog" aria-modal="true" aria-labelledby="rvModalTitle">
+        <div class="modal__box">
+          <div class="modal__head"><h3 id="rvModalTitle">Write a Review</h3><button type="button" id="rvClose" aria-label="Close review form">×</button></div>
+          <form class="rvform" id="rvForm">
+            <div class="stars" id="rvStars" role="radiogroup" aria-label="Your rating"></div>
+            <input type="text" id="rvName" placeholder="Your name" aria-label="Your name" />
+            <textarea id="rvText" rows="3" placeholder="Share your experience with this product" aria-label="Your review"></textarea>
+            <button type="submit" class="btn btn--primary btn--sm">Submit Review</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+    (function(){
+      const q = new URLSearchParams(location.search);
+      const p = window.ECOM_get(q.get("id") || "p-headphone");
+      document.title = "E-com — " + p.name;
+      const emi = (p.price/12).toFixed(0);
+      const gal = (p.gallery && p.gallery.length ? p.gallery : [p.img]);
+      document.getElementById("pdTop").innerHTML =
+        '<div class="pd__gallery"><div class="pd__thumbs">' + gal.map((g,i)=>'<button type="button" class="pd__thumb'+(i===0?' active':'')+'" data-i="'+i+'" aria-label="View image '+(i+1)+'"><img src="'+g.replace("w=800","w=200")+'" alt="'+p.name+' view '+(i+1)+'" /></button>').join("") + '</div>' +
+        '<div class="pd__stage"><img id="pdMain" src="'+gal[0]+'" alt="'+p.name+'" /><button type="button" class="pd__heart" id="pdHeart" aria-label="Add to wishlist" aria-pressed="false">\u2665</button><button type="button" class="pd__arrow pd__arrow--prev" id="pdPrev" aria-label="Previous image">\u2039</button><button type="button" class="pd__arrow pd__arrow--next" id="pdNext" aria-label="Next image">\u203A</button></div></div>' +
+        '<div class="pd__info"><h1 title="'+p.name.replace(/"/g,"")+'">'+p.name+'</h1>' +
+        '<div class="pd__chips"><span class="stars">' + '<svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg>'.repeat(5) + '</span><span>'+p.reviews+' Reviews</span></div>' +
+        '<div class="pd__meta"><span>Stock : <b>'+p.stock+'</b></span><span>PID : '+p.pid+'</span><span>Brand : '+p.brand+'</span><span>Model : '+(p.model||p.name)+'</span><span>Warranty : '+p.warranty+'</span></div>' +
+        '<ul class="pd__bullets">'+((p.bullets||[]).map(b=>'<li>'+b+'</li>').join("")||'<li>Official product with warranty support.</li>')+'</ul>' +
+        '<div class="pd__pricecards"><div class="pd__pcard"><small>Discount Price</small><div><span class="big">$'+p.price.toFixed(2)+'</span>'+(p.old?'<s>$'+p.old.toFixed(2)+'</s>':'')+'</div><a href="checkout.html">+ Available Payment Method</a></div>' +
+        '<div class="pd__pcard"><small>EMI Start From*</small><div class="big big--blue">$'+emi+'</div><a href="checkout.html">\u25A4 View Banks EMI Plans</a></div></div>' +
+        '<div class="pd__buyrow"><div class="qty qty--lg"><button aria-label="Decrease quantity">-</button><span id="pdQty">1</span><button aria-label="Increase quantity">+</button></div>' +
+        '<button type="button" class="btn btn--primary" id="pdOrder">Order Now</button><button type="button" class="btn btn--ghost" id="pdCart">Add to Cart</button></div>' +
+        '<p class="pd__delivery">Free Delivery \u00B7 <span>In stock</span> \u00B7 Cash on Delivery available</p></div>';
+      let cur = 0;
+      const main = document.getElementById("pdMain"), thumbs = [...document.querySelectorAll(".pd__thumb")];
+      const show = (i)=>{ cur=(i+thumbs.length)%thumbs.length; thumbs.forEach((t,k)=>t.classList.toggle("active",k===cur)); main.src = gal[cur]; };
+      thumbs.forEach((t,k)=>t.addEventListener("click",()=>show(k)));
+      document.getElementById("pdPrev").addEventListener("click",()=>show(cur-1));
+      document.getElementById("pdNext").addEventListener("click",()=>show(cur+1));
+      document.getElementById("pdHeart").addEventListener("click",function(){ const on=this.classList.toggle("active"); this.setAttribute("aria-pressed",on); });
+      const qtyEl = document.getElementById("pdQty");
+      document.querySelector(".pd__buyrow .qty").addEventListener("click",(e)=>{ const b=e.target.closest("button"); if(!b) return; let n=parseInt(qtyEl.textContent,10)||1; n = b.getAttribute("aria-label")==="Decrease quantity" ? Math.max(1,n-1) : Math.min(99,n+1); qtyEl.textContent=n; });
+      const pdQty = ()=>parseInt(qtyEl.textContent,10)||1;
+      document.getElementById("pdCart").addEventListener("click",()=>{ window.ECOM_add(p.id, pdQty()); window.ECOM_openCart(); });
+      document.getElementById("pdOrder").addEventListener("click",()=>{ window.ECOM_add(p.id, pdQty()); location.href="checkout.html"; });
+      // tabs
+      const tabs=[...document.querySelectorAll("#pdTabs button")];
+      tabs.forEach(b=>b.addEventListener("click",()=>{ tabs.forEach(x=>{x.classList.remove("active");x.setAttribute("aria-selected","false");document.getElementById("tab-"+x.dataset.tab).hidden=true;}); b.classList.add("active"); b.setAttribute("aria-selected","true"); document.getElementById("tab-"+b.dataset.tab).hidden=false; }));
+      // spec
+      const specs = p.specs || [{g:p.cat, rows:[["Brand",p.brand],["Model",(p.model||p.name)],["Warranty",p.warranty]]}];
+      const sim = window.ECOM_PRODUCTS.filter(x=>x.id!==p.id && (x.cat===p.cat||x.sub===p.sub)).concat(window.ECOM_PRODUCTS.filter(x=>x.id!==p.id)).slice(0,4);
+      document.getElementById("pdSpec").innerHTML = "<div class='spec-grid'><div><h3 style='font-size:.95rem;margin-bottom:12px'>Specification</h3>" + specs.map(g=>'<div class="spec__g">'+g.g+'</div>'+g.rows.map(r=>'<dl class="spec__r"><dt>'+r[0]+'</dt><dd>'+r[1]+'</dd></dl>').join("")).join("") + "</div><aside class='sim'><h3>Similar Product</h3>" + sim.map(x=>"<div class='sim__item'><img src='"+x.img+"' alt='"+x.name+"' /><div><strong>"+x.name+"</strong><p><em>$"+x.price.toFixed(2)+"</em>"+(x.old?"<s>$"+x.old.toFixed(2)+"</s>":"")+"</p><button data-sim='"+x.id+"'>⊞ Add to Compare</button></div></div>").join("") + "</aside></div>";
+      document.querySelectorAll("[data-sim]").forEach(b=>b.addEventListener("click",()=>{ location.href="product-details.html?id="+b.dataset.sim; }));
+      const descHTML = "<h2>About "+p.name+"</h2><p style='font-size:.85rem'>"+((p.bullets||[]).join(". ")||"Quality checked, warranty supported.")+"</p><p style='font-size:.85rem'>Brand "+p.brand+" \u00B7 Category "+p.cat+" ("+p.sub+"). Free delivery, 7-day easy return and official warranty.</p>";
+      document.getElementById("pdDescInline").innerHTML = descHTML;
+      document.getElementById("pdDesc").innerHTML = descHTML;
+      document.getElementById("pdFaq").innerHTML = ["Is this product official?|Yes — sourced from verified sellers with "+p.warranty+" warranty.","What is the delivery time?|Inside Dhaka 24\u201348h, outside 3\u20135 days. Cash on Delivery available.","Can I return it?|Yes, 7-day easy return for unused items in original packing."].map(s=>{const[a,b]=s.split("|");return "<details><summary>"+a+"</summary><p>"+b+"</p></details>";}).join("");
+      // reviews: individual, no open-review list
+      const seed = [["Fahim Rahman","06 Oct 2026",5,"The phone-stand feature on the charging case is surprisingly useful when I want to watch something hands-free. It is a small addition that I use often in my R50i NC earbuds."],["Walid Hossain Tawsin","20 Aug 2026",5,"Best earbuds in budget, feels premium and lightweight. ANC performs nicely."],["Maliha Chowdhudry","06 Aug 2026",5,"Thank god I bought this. The ANC sometimes feels the lifesaving feature, and it stays comfortable even after hours of use."],["Nusrat Jahan","12 Sep 2026",5,"Original product with sealed pack. Delivery rider was polite and on time. Will order again."],["Tanvir Hasan","28 Aug 2026",4,"Good value for money. Packaging could be better but product works perfectly."]];
+      const extra = JSON.parse(localStorage.getItem("ecom_rev_"+p.id)||"[]");
+      const allRv = [...extra, ...seed];
+      const avg = (allRv.reduce((a,r)=>a+r[2],0)/Math.max(1,allRv.length));
+      const star = '<svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></svg>';
+      const starRow = (n)=>{ let s=""; for(let i=0;i<5;i++) s += (i<Math.round(n)?star:star.replace('<svg','<svg class="off"')); return s; };
+      const renderRv = ()=>{
+        document.getElementById("tabRev").textContent = "Reviews("+allRv.length+")";
+        document.getElementById("rvTitle").textContent = "Reviews ("+allRv.length+")";
+        document.getElementById("rvAvg").innerHTML = '<span class="stars">'+starRow(avg)+'</span><span>'+avg.toFixed(avg%1?1:0)+' out of 5</span>';
+        document.getElementById("rvList").innerHTML = allRv.map((r)=>'<article class="rv"><p class="stars">'+starRow(r[2])+'</p><p class="rv__text">'+r[3]+'</p><p class="rv__by">By <strong>'+r[0]+'</strong> on '+r[1]+'</p></article>').join("");
+      };
+      renderRv();
+      let myScore = 5;
+      const rs = document.getElementById("rvStars");
+      rs.innerHTML = [1,2,3,4,5].map(i=>'<button type="button" data-s="'+i+'" aria-label="'+i+' star" style="background:none;border:none;font-size:1.4rem;color:'+(i<=5?'#f5a623':'#ccc')+'">\u2605</button>').join("");
+      rs.addEventListener("click",(e)=>{ const b=e.target.closest("button"); if(!b) return; myScore=+b.dataset.s; [...rs.children].forEach((x,k)=>x.style.color=k<myScore?'#f5a623':'#ccc'); });
+      const form = document.getElementById("rvForm");
+      const modal = document.getElementById("rvModal");
+      const openModal = ()=>{ modal.hidden = false; document.body.style.overflow = "hidden"; document.getElementById("rvName").focus(); };
+      const closeModal = ()=>{ modal.hidden = true; document.body.style.overflow = ""; };
+      document.getElementById("rvWrite").addEventListener("click", openModal);
+      document.getElementById("rvClose").addEventListener("click", closeModal);
+      modal.addEventListener("click", (e)=>{ if(e.target === modal) closeModal(); });
+      document.addEventListener("keydown", (e)=>{ if(e.key === "Escape" && !modal.hidden) closeModal(); });
+      form.addEventListener("submit",(e)=>{ e.preventDefault(); const n=document.getElementById("rvName").value.trim()||"Guest"; const t=document.getElementById("rvText").value.trim(); if(!t) return; allRv.unshift([n,new Date().toLocaleDateString("en-GB",{day:"2-digit",month:"short",year:"numeric"}),myScore,t]); try{ localStorage.setItem("ecom_rev_"+p.id, JSON.stringify(allRv.slice(0,10))); }catch(_){} renderRv(); form.reset(); closeModal(); });
+      document.getElementById("tabFaq").textContent = "Questions(3)";
+    })();
+    </script>
+  </main>
+
+
+  <!-- ══ Footer ══ -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="f-col">
+        <h4>Support</h4>
+        <a class="f-contact" href="tel:+8801700000000"><span class="icon icon-24"><svg viewBox="0 0 24 24"><path d="M6.6 3h3l1.5 4.5-2 1.5a12 12 0 0 0 5.9 5.9l1.5-2L21 14.4v3c0 .6-.4 1-1 1C10.6 18.4 5.6 13.4 5.6 4c0-.6.4-1 1-1z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><span>09612-345678<br />+880 1700-000000</span></a>
+        <a class="f-contact" href="#"><span class="icon icon-24"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span><span>Find Our Store</span></a>
+        <div class="f-social">
+          <a href="#" aria-label="Facebook" class="icon icon-24"><svg viewBox="0 0 24 24"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7h2.5z"/></svg></a>
+          <a href="#" aria-label="X" class="icon icon-24"><svg viewBox="0 0 24 24"><path d="M17.5 4h2.9l-6.4 7.3L21.5 20h-5.9l-4.6-6-5.3 6H2.8l6.9-7.8L2.5 4h6l4.2 5.5L17.5 4zm-1 14.3h1.6L7.7 5.5H6L16.5 18.3z"/></svg></a>
+          <a href="#" aria-label="Instagram" class="icon icon-24"><svg viewBox="0 0 24 24"><path d="M12 8.8A3.2 3.2 0 1 0 12 15.2 3.2 3.2 0 0 0 12 8.8zm0-2.1a5.3 5.3 0 1 1 0 10.6 5.3 5.3 0 0 1 0-10.6zm6.8-.3a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0zM12 4.2c-2.5 0-2.8 0-3.8.1-1 .1-1.6.2-2.1.4-.6.2-1 .5-1.4.9-.4.4-.7.8-.9 1.4-.2.5-.3 1.1-.4 2.1-.1 1-.1 1.3-.1 3.8s0 2.8.1 3.8c.1 1 .2 1.6.4 2.1.2.6.5 1 .9 1.4.4.4.8.7 1.4.9.5.2 1.1.3 2.1.4 1 .1 1.3.1 3.8.1s2.8 0 3.8-.1c1-.1 1.6-.2 2.1-.4.6-.2 1-.5 1.4-.9.4-.4.7-.8.9-1.4.2-.5.3-1.1.4-2.1.1-1 .1-1.3.1-3.8s0-2.8-.1-3.8c-.1-1-.2-1.6-.4-2.1-.2-.6-.5-1-.9-1.4-.4-.4-.8-.7-1.4-.9-.5-.2-1.1-.3-2.1-.4-1-.1-1.3-.1-3.8-.1z"/></svg></a>
+          <a href="#" aria-label="YouTube" class="icon icon-24"><svg viewBox="0 0 24 24"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8c1.6.4 7.8.4 7.8.4s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3L10 15z"/></svg></a>
+        </div>
+      </div>
+      <div class="f-col">
+        <h4>About Us</h4>
+        <a href="#">Value Added</a>
+        <a href="#">Careers</a>
+        <a href="#">Press</a>
+        <a href="#">Blog</a>
+        <a href="#">Order Tracking</a>
+      </div>
+      <div class="f-col">
+        <h4>Help</h4>
+        <a href="#">Contact Us</a>
+        <a href="#">FAQs</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms &amp; Conditions</a>
+        <a href="#">Return &amp; Refund Policy</a>
+      </div>
+      <div class="f-col">
+        <h4>Call Us</h4>
+        <a class="f-contact" href="tel:+8801700000000"><span class="icon icon-24"><svg viewBox="0 0 24 24"><path d="M6.6 3h3l1.5 4.5-2 1.5a12 12 0 0 0 5.9 5.9l1.5-2L21 14.4v3c0 .6-.4 1-1 1C10.6 18.4 5.6 13.4 5.6 4c0-.6.4-1 1-1z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><span>09612-345678<br />+880 1700-000000</span></a>
+        <a class="f-contact" href="mailto:support@ecom.com"><span class="icon icon-24"><svg viewBox="0 0 24 24"><path d="M3 5h18v14H3zM3 6l9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><span>support@ecom.com</span></a>
+        <p class="f-contact"><span class="icon icon-24"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span><span>House 12, Road 5, Dhaka, Bangladesh</span></p>
+      </div>
+    </div>
+    <div class="footer__bar">
+      <div class="container footer__bar-inner">
+        <div class="pay" aria-label="Accepted payments">
+          <span class="pay__visa">VISA</span>
+          <span class="pay__mc"><i></i><i></i>Mastercard</span>
+          <span class="pay__amex">AMEX</span>
+          <span class="pay__bkash">bKash</span>
+          <span class="pay__nagad">Nagad</span>
+          <span class="pay__cod">COD</span>
+        </div>
+        <p>© 2026 E-com. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

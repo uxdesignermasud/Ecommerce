@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-com — Checkout</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="store.js"></script>
+</head>
+<body>
+
+  <!-- ══ Top utility bar ══ -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__social">
+        <span>Follow Us:</span>
+        <a href="#" aria-label="Facebook" class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7h2.5z"/></svg></a>
+        <a href="#" aria-label="X" class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M17.5 4h2.9l-6.4 7.3L21.5 20h-5.9l-4.6-6-5.3 6H2.8l6.9-7.8L2.5 4h6l4.2 5.5L17.5 4zm-1 14.3h1.6L7.7 5.5H6L16.5 18.3z"/></svg></a>
+        <a href="#" aria-label="Instagram" class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M12 8.8A3.2 3.2 0 1 0 12 15.2 3.2 3.2 0 0 0 12 8.8zm0-2.1a5.3 5.3 0 1 1 0 10.6 5.3 5.3 0 0 1 0-10.6zm6.8-.3a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0zM12 4.2c-2.5 0-2.8 0-3.8.1-1 .1-1.6.2-2.1.4-.6.2-1 .5-1.4.9-.4.4-.7.8-.9 1.4-.2.5-.3 1.1-.4 2.1-.1 1-.1 1.3-.1 3.8s0 2.8.1 3.8c.1 1 .2 1.6.4 2.1.2.6.5 1 .9 1.4.4.4.8.7 1.4.9.5.2 1.1.3 2.1.4 1 .1 1.3.1 3.8.1s2.8 0 3.8-.1c1-.1 1.6-.2 2.1-.4.6-.2 1-.5 1.4-.9.4-.4.7-.8.9-1.4.2-.5.3-1.1.4-2.1.1-1 .1-1.3.1-3.8s0-2.8-.1-3.8c-.1-1-.2-1.6-.4-2.1-.2-.6-.5-1-.9-1.4-.4-.4-.8-.7-1.4-.9-.5-.2-1.1-.3-2.1-.4-1-.1-1.3-.1-3.8-.1z"/></svg></a>
+        <a href="#" aria-label="YouTube" class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8c1.6.4 7.8.4 7.8.4s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3L10 15z"/></svg></a>
+      </div>
+      <p class="topbar__promo">Extra 10% off on $1000 <a href="#">Shop Now</a></p>
+      <div class="topbar__links">
+        <a href="#">Track your order</a>
+        <span class="divider">|</span>
+        <button class="lang">English <span class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ Main header ══ -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="index.html">
+        <img src="Assets/Icon/E com Logo.svg" alt="E-com logo" width="163" height="50" />
+      </a>
+      <div class="header__actions">
+        <div class="searchwrap">
+          <form class="search" role="search" id="searchForm">
+            <div class="search__cat">
+              <button type="button" id="searchCatBtn" aria-expanded="false" aria-haspopup="listbox">
+                <span id="searchCatLabel">All</span>
+                <span class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </button>
+              <ul class="search__menu" id="searchCatMenu" role="listbox" hidden>
+                <li><button type="button" class="active" data-value="all" role="option">All</button></li>
+                <li><button type="button" data-value="mobiles" role="option">Mobiles &amp; Tab</button></li>
+                <li><button type="button" data-value="electronics" role="option">Electronics</button></li>
+                <li><button type="button" data-value="womens" role="option">Women's Fashion</button></li>
+                <li><button type="button" data-value="mens" role="option">Men's Fashion</button></li>
+                <li><button type="button" data-value="beauty" role="option">Beauty</button></li>
+                <li><button type="button" data-value="home" role="option">Home &amp; Living</button></li>
+                <li><button type="button" data-value="appliances" role="option">Appliances</button></li>
+                <li><button type="button" data-value="baby" role="option">Baby &amp; Kids</button></li>
+                <li><button type="button" data-value="sports" role="option">Sports</button></li>
+              </ul>
+            </div>
+            <input type="search" id="searchInput" placeholder="Search phones, beauty, home & more…" aria-label="Search products" autocomplete="off" />
+            <button type="button" class="search__tool" id="imgSearchBtn" aria-label="Search by image" title="Search by image">
+              <svg viewBox="0 0 24 24"><path d="M4 8h3l2-2.5h6L17 8h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1zm8 9a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0-2a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg>
+            </button>
+            <button type="button" class="search__tool search__mic" id="voiceBtn" aria-label="Voice search" title="Voice search"><svg viewBox="0 0 24 24"><path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v6a3 3 0 0 0 3 3zm6-3a6 6 0 0 1-12 0H4a8 8 0 0 0 7 7.94V22h2v-2.06A8 8 0 0 0 20 12h-2z"/></svg></button>
+              <button type="submit" class="search__go" aria-label="Search" title="Search">
+              <svg viewBox="0 0 24 24"><path d="M10 2a8 8 0 1 0 4.9 14.3l4 4 1.4-1.4-4-4A8 8 0 0 0 10 2zm0 2a6 6 0 1 1 0 12 6 6 0 0 1 0-12z"/></svg>
+              <span>Search</span>
+            </button>
+          </form>
+          <input type="file" id="imgSearchInput" accept="image/*" hidden />
+<div class="img-panel" id="imgPanel" hidden>
+            <img id="imgPreview" alt="Uploaded search image" />
+            <p>Image added — showing visually similar picks below.</p>
+          </div>
+        </div>
+        <a href="auth.html" class="h-icon" aria-label="Sign in"><img src="Assets/Icon/User Profile.svg" alt="" width="24" height="24" /><span>Sign in</span></a>
+        <a href="#" class="h-icon" aria-label="Wishlist"><img src="Assets/Icon/Fav.svg" alt="" width="24" height="24" /><span>Wishlist</span></a>
+        <a href="#" class="h-icon" aria-label="Cart"><img src="Assets/Icon/Cart.svg" alt="" width="24" height="24" /><span>Cart</span></a>
+      </div>
+    </div>
+    <!-- ══ Category strip below header ══ -->
+    <div class="catstrip">
+      <div class="container catstrip__inner">
+        <button class="catstrip__all" id="allCatsBtn" aria-expanded="false"><span class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg></span> All Categories <span class="icon icon-16 catstrip__chev"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+        <nav class="catstrip__nav" aria-label="Categories">
+          <a href="category.html">Fashion</a>
+          <a href="category.html">Electronics &amp; Gadget</a>
+          <a href="category.html">Appliances</a>
+          <a href="category.html">Mobiles &amp; Tablets</a>
+          <a href="category.html">Kitchen &amp; Dining</a>
+          <a href="category.html">Travel Accessories</a>
+          <a href="category.html">Bags &amp; Luggage</a>
+          <a href="category.html">Personal Care</a>
+          <a href="category.html">Food &amp; Grocery</a>
+        </nav>
+      </div>
+      <!-- ══ Mega menu (opens on All Categories click) ══ -->
+      <div class="megamenu" id="megaMenu" hidden>
+        <div class="container megamenu__inner">
+          <ul class="megamenu__side" id="megaSide"></ul>
+          <div class="megamenu__main">
+            <div class="megamenu__head">
+              <h3 id="megaTitle">Fashion</h3>
+              <a href="#">View all <span class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+            </div>
+            <div class="megamenu__subs" id="megaSubs"></div>
+          </div>
+          <aside class="megamenu__explore">
+            <p class="explore__kicker">Explore</p>
+            <h4 id="exploreTitle">Fashion</h4>
+            <p id="exploreText">Browse the top picks in fashion from verified sellers.</p>
+            <a class="btn btn--primary btn--sm" href="#">Shop now <span class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+            <p class="explore__note"><span class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M3 7h11v8H3zM14 10h4l3 3v2h-7zM6 19a1.8 1.8 0 1 0 0-3.6A1.8 1.8 0 0 0 6 19zm11 0a1.8 1.8 0 1 0 0-3.6 1.8 1.8 0 0 0 0 3.6z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span> 100% Cash on Delivery</p>
+            <p class="explore__note"><span class="icon icon-16"><svg viewBox="0 0 24 24"><path d="M3 7h11v8H3zM14 10h4l3 3v2h-7zM6 19a1.8 1.8 0 1 0 0-3.6A1.8 1.8 0 0 0 6 19zm11 0a1.8 1.8 0 1 0 0-3.6 1.8 1.8 0 0 0 0 3.6z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span> Fast home delivery</p>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="pagehead"><h1>Checkout</h1><p>Fast, secure, user-friendly — 3 quick steps.</p></div>
+      <ol class="steps" id="coSteps">
+        <li class="now" data-s="1"><i>1</i> Shipping</li>
+        <li data-s="2"><i>2</i> Payment</li>
+        <li data-s="3"><i>3</i> Review</li>
+      </ol>
+      <div id="coBody"></div>
+    </div>
+    <script>
+    (function(){
+      const money = window.ECOM_money;
+      let step = 1;
+      const data = JSON.parse(localStorage.getItem("ecom_co")||"{}");
+      const save = ()=>localStorage.setItem("ecom_co", JSON.stringify(data));
+      const ship = (data.shipping||{}), pay = (data.payment||{method:"cod"});
+      const lineHTML = lines => lines.map(l=>'<div class="co-line"><img src="'+l.p.img+'" alt="'+l.p.name+'" /><div><strong>'+l.p.name+'</strong><small>'+l.p.brand+' \u00B7 Qty '+l.qty+'</small></div><em>'+money(l.p.price*l.qty)+'</em></div>').join("");
+      function totals(){
+        const sub = window.ECOM_cart.subtotal();
+        const del = sub===0?0:(sub>=499?0:29);
+        return { sub, del, tot: sub+del };
+      }
+      function paintSteps(){
+        document.querySelectorAll("#coSteps li").forEach(li=>{
+          const s=+li.dataset.s;
+          li.className = s<step?"done":(s===step?"now":"");
+          li.querySelector("i").textContent = s<step?"\u2713":s;
+        });
+      }
+      function vShip(){
+        const req=["name","phone","address","city"];
+        for(const k of req){ if(!((data.shipping||{})[k]||"").trim()) return false; }
+        return true;
+      }
+      function render(){
+        paintSteps();
+        const t = totals(), lines = window.ECOM_cart.lines();
+        const body = document.getElementById("coBody");
+        if(step===1){
+          body.innerHTML = '<div class="co-grid"><div class="co-card"><h2>1 \u00B7 Shipping address</h2><div class="co-2"><label>Full name<input id="f-name" value="'+(ship.name||"")+'" placeholder="e.g. Arif Rahman" /></label><label>Phone<input id="f-phone" value="'+(ship.phone||"")+'" placeholder="01XXXXXXXXX" /></label></div><label>Address<textarea id="f-addr" rows="2" placeholder="House, road, area">'+(ship.address||"")+'</textarea></label><div class="co-2"><label>City<select id="f-city"><option>Dhaka</option><option>Chattogram</option><option>Sylhet</option><option>Khulna</option><option>Rajshahi</option><option>Barishal</option></select></label><label>Postal code<input id="f-zip" value="'+(ship.zip||"")+'" placeholder="1207" /></label></div><label style="flex-direction:row;align-items:center;gap:8px;display:flex"><input type="checkbox" id="f-save" style="width:auto" /> Save for next time</label></div><div class="co-side"><aside class="sumbox"><h2>Order Summary</h2>'+lineHTML(lines)+'<div class="row"><span>Delivery</span><strong>'+(t.del===0?"FREE":money(t.del))+'</strong></div><div class="row total"><span>Total</span><strong>'+money(t.tot)+'</strong></div></aside><div class="co-cta"><button class="btn btn--primary" id="toPay">Continue to Payment</button></div></div></div>';
+          document.getElementById("f-city").value = ship.city||"Dhaka";
+          document.getElementById("toPay").addEventListener("click",()=>{
+            data.shipping={name:document.getElementById("f-name").value, phone:document.getElementById("f-phone").value, address:document.getElementById("f-addr").value, city:document.getElementById("f-city").value, zip:document.getElementById("f-zip").value}; save();
+            if(!vShip()){ document.getElementById("toPay").textContent="Please fill name, phone, address, city"; setTimeout(()=>document.getElementById("toPay").textContent="Continue to Payment",1800); return; }
+            step=2; render();
+          });
+        } else if(step===2){
+          body.innerHTML = '<div class="co-grid"><div class="co-card"><h2>2 \u00B7 Payment method</h2>' +
+            [["cod","Cash on Delivery","Pay in cash when you receive the parcel.","cod"],["card","Debit / Credit Card","Visa, Mastercard, AMEX — secure 3DS.","card"],["bkash","bKash","Pay with your bKash wallet.","bkash"],["emi","EMI (3\u201312 months)","0% plans on selected banks.","emi"]].map(o=>'<label class="payopt"><input type="radio" name="pm" value="'+o[0]+'"'+(pay.method===o[0]?" checked":"")+' /><span class="payopt__txt"><strong>'+o[1]+'</strong><small>'+o[2]+'</small></span></label>').join("") +
+            '<div id="cardBox"'+(pay.method==="card"?"":" hidden")+'><div class="co-2"><label>Card number<input id="cc-n" inputmode="numeric" placeholder="4111 1111 1111 1111" /></label><label>Expiry<input id="cc-e" placeholder="MM/YY" /></label></div><div class="co-2"><label>CVC<input id="cc-c" inputmode="numeric" placeholder="123" /></label><label>Name on card<input id="cc-h" placeholder="ARIF RAHMAN" /></label></div></div>' +
+            '</div><div class="co-side"><aside class="sumbox"><h2>Order Summary</h2>'+lineHTML(lines)+'<div class="row"><span>Subtotal</span><strong>'+money(t.sub)+'</strong></div><div class="row"><span>Delivery</span><strong>'+(t.del===0?"FREE":money(t.del))+'</strong></div><div class="row total"><span>Total</span><strong>'+money(t.tot)+'</strong></div></aside><div class="co-cta"><button class="btn btn--ghost" id="back1">Back</button><button class="btn btn--primary" id="toRev">Review Order</button></div></div></div>';
+          document.querySelectorAll('input[name="pm"]').forEach(r=>r.addEventListener("change",()=>{ pay.method=r.value; data.payment=pay; save(); document.getElementById("cardBox").hidden = pay.method!=="card"; }));
+          document.getElementById("back1").addEventListener("click",()=>{ step=1; render(); });
+          document.getElementById("toRev").addEventListener("click",()=>{
+            if(pay.method==="card"){
+              const n=(document.getElementById("cc-n").value||"").replace(/\s/g,"");
+              if(n.length<12){ document.getElementById("toRev").textContent="Enter a valid card number"; setTimeout(()=>{const b=document.getElementById("toRev"); if(b) b.textContent="Review Order";},1800); return; }
+            }
+            step=3; render();
+          });
+        } else if(step===3){
+          const s=data.shipping||{};
+          body.innerHTML = '<div class="co-grid"><div class="co-card"><h2>3 \u00B7 Review &amp; place order</h2><div class="co-card" style="padding:12px 16px"><strong style="font-size:.85rem">Ship to</strong><span style="font-size:.82rem">'+(s.name||"")+' \u00B7 '+(s.phone||"")+'<br>'+(s.address||"")+', '+(s.city||"")+' '+(s.zip||"")+'</span></div><div class="co-card" style="padding:12px 16px"><strong style="font-size:.85rem">Pay with</strong><span style="font-size:.82rem">'+pay.method.toUpperCase()+'</span></div>'+lineHTML(lines)+'</div><div class="co-side"><aside class="sumbox"><h2>Order Summary</h2><div class="row"><span>Subtotal</span><strong>'+money(t.sub)+'</strong></div><div class="row"><span>Delivery</span><strong>'+(t.del===0?"FREE":money(t.del))+'</strong></div><div class="row total"><span>Total</span><strong>'+money(t.tot)+'</strong></div><p style="font-size:.72rem;color:#666">\u2713 Free 7-day returns \u00B7 \u2713 Official warranty \u00B7 \u2713 COD available</p></aside><div class="co-cta"><button class="btn btn--ghost" id="back2">Back</button><button class="btn btn--primary" id="place">Place Order \u00B7 '+money(t.tot)+'</button></div></div></div>';
+          document.getElementById("back2").addEventListener("click",()=>{ step=2; render(); });
+          document.getElementById("place").addEventListener("click",()=>{
+            const id="EC"+Date.now().toString().slice(-6);
+            try { const me = window.ECOM_user.current(); window.ECOM_orders.add({ id, email: me ? (me.email || me.mobile) : "guest", items: lines.map(l => ({ name: l.p.name, qty: l.qty, price: l.p.price })), total: t.tot, status: "Processing", date: new Date().toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" }) }); } catch (_) {}
+            window.ECOM_cart.clear(); step=4; render(id);
+          });
+        } else {
+          body.innerHTML = '<div class="success"><div class="tick">\u2713</div><h2>Order placed — thank you!</h2><p>Order <strong>'+arguments[0]+'</strong> is confirmed. We\u2019ll SMS tracking updates to '+(data.shipping.phone||"your phone")+'.</p><div class="success__cta"><a class="btn btn--primary" href="category.html">Continue Shopping</a><a class="btn btn--ghost" href="index.html">Back Home</a></div></div>';
+        }
+      }
+      render();
+    })();
+    </script>
+  </main>
+
+
+  <!-- ══ Footer ══ -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="f-col">
+        <h4>Support</h4>
+        <a class="f-contact" href="tel:+8801700000000"><span class="icon icon-24"><svg viewBox="0 0 24 24"><path d="M6.6 3h3l1.5 4.5-2 1.5a12 12 0 0 0 5.9 5.9l1.5-2L21 14.4v3c0 .6-.4 1-1 1C10.6 18.4 5.6 13.4 5.6 4c0-.6.4-1 1-1z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><span>09612-345678<br />+880 1700-000000</span></a>
+        <a class="f-contact" href="#"><span class="icon icon-24"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span><span>Find Our Store</span></a>
+        <div class="f-social">
+          <a href="#" aria-label="Facebook" class="icon icon-24"><svg viewBox="0 0 24 24"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7h2.5z"/></svg></a>
+          <a href="#" aria-label="X" class="icon icon-24"><svg viewBox="0 0 24 24"><path d="M17.5 4h2.9l-6.4 7.3L21.5 20h-5.9l-4.6-6-5.3 6H2.8l6.9-7.8L2.5 4h6l4.2 5.5L17.5 4zm-1 14.3h1.6L7.7 5.5H6L16.5 18.3z"/></svg></a>
+          <a href="#" aria-label="Instagram" class="icon icon-24"><svg viewBox="0 0 24 24"><path d="M12 8.8A3.2 3.2 0 1 0 12 15.2 3.2 3.2 0 0 0 12 8.8zm0-2.1a5.3 5.3 0 1 1 0 10.6 5.3 5.3 0 0 1 0-10.6zm6.8-.3a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0zM12 4.2c-2.5 0-2.8 0-3.8.1-1 .1-1.6.2-2.1.4-.6.2-1 .5-1.4.9-.4.4-.7.8-.9 1.4-.2.5-.3 1.1-.4 2.1-.1 1-.1 1.3-.1 3.8s0 2.8.1 3.8c.1 1 .2 1.6.4 2.1.2.6.5 1 .9 1.4.4.4.8.7 1.4.9.5.2 1.1.3 2.1.4 1 .1 1.3.1 3.8.1s2.8 0 3.8-.1c1-.1 1.6-.2 2.1-.4.6-.2 1-.5 1.4-.9.4-.4.7-.8.9-1.4.2-.5.3-1.1.4-2.1.1-1 .1-1.3.1-3.8s0-2.8-.1-3.8c-.1-1-.2-1.6-.4-2.1-.2-.6-.5-1-.9-1.4-.4-.4-.8-.7-1.4-.9-.5-.2-1.1-.3-2.1-.4-1-.1-1.3-.1-3.8-.1z"/></svg></a>
+          <a href="#" aria-label="YouTube" class="icon icon-24"><svg viewBox="0 0 24 24"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8c1.6.4 7.8.4 7.8.4s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3L10 15z"/></svg></a>
+        </div>
+      </div>
+      <div class="f-col">
+        <h4>About Us</h4>
+        <a href="#">Value Added</a>
+        <a href="#">Careers</a>
+        <a href="#">Press</a>
+        <a href="#">Blog</a>
+        <a href="#">Order Tracking</a>
+      </div>
+      <div class="f-col">
+        <h4>Help</h4>
+        <a href="#">Contact Us</a>
+        <a href="#">FAQs</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms &amp; Conditions</a>
+        <a href="#">Return &amp; Refund Policy</a>
+      </div>
+      <div class="f-col">
+        <h4>Call Us</h4>
+        <a class="f-contact" href="tel:+8801700000000"><span class="icon icon-24"><svg viewBox="0 0 24 24"><path d="M6.6 3h3l1.5 4.5-2 1.5a12 12 0 0 0 5.9 5.9l1.5-2L21 14.4v3c0 .6-.4 1-1 1C10.6 18.4 5.6 13.4 5.6 4c0-.6.4-1 1-1z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><span>09612-345678<br />+880 1700-000000</span></a>
+        <a class="f-contact" href="mailto:support@ecom.com"><span class="icon icon-24"><svg viewBox="0 0 24 24"><path d="M3 5h18v14H3zM3 6l9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><span>support@ecom.com</span></a>
+        <p class="f-contact"><span class="icon icon-24"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span><span>House 12, Road 5, Dhaka, Bangladesh</span></p>
+      </div>
+    </div>
+    <div class="footer__bar">
+      <div class="container footer__bar-inner">
+        <div class="pay" aria-label="Accepted payments">
+          <span class="pay__visa">VISA</span>
+          <span class="pay__mc"><i></i><i></i>Mastercard</span>
+          <span class="pay__amex">AMEX</span>
+          <span class="pay__bkash">bKash</span>
+          <span class="pay__nagad">Nagad</span>
+          <span class="pay__cod">COD</span>
+        </div>
+        <p>© 2026 E-com. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
